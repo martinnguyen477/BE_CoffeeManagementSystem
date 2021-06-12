@@ -1,0 +1,4 @@
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Model\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.Model.csprojAssemblyReference.cache
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Model\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.Model.AssemblyInfoInputs.cache
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Model\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.Model.AssemblyInfo.cs
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Model\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.Model.csproj.CoreCompileInputs.cache
