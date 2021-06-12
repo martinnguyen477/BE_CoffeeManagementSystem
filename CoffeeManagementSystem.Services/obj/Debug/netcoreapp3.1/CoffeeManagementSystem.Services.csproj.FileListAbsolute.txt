@@ -1,0 +1,12 @@
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Services\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.deps.json
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Services\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.dll
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Services\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.pdb
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Services\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.csprojAssemblyReference.cache
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Services\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.AssemblyInfoInputs.cache
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Services\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.AssemblyInfo.cs
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Services\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.csproj.CoreCompileInputs.cache
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Services\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.dll
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Services\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.pdb
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Services\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.Data.dll
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Services\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.Model.dll
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Services\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.Data.pdb

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj": {}
+    "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj": {
+    "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj",
+        "projectUniqueName": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj",
         "projectName": "CoffeeManagementSystem.Model",
-        "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj",
+        "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj",
         "packagesPath": "C:\\Users\\Nguyen Quoc Cuong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem\\CoffeeManagementSystem.Model\\obj\\",
+        "outputPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nguyen Quoc Cuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[5.6.4, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.15, )"
