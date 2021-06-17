@@ -10,3 +10,5 @@ C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Services\obj\D
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Services\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.Data.dll
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Services\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.Model.dll
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Services\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.Data.pdb
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Services\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.Model.pdb
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.Services\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.csproj.CopyComplete

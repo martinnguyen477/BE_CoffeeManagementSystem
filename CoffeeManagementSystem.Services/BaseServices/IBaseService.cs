@@ -1,14 +1,17 @@
-﻿using CoffeeManagementSystem.Model.BaseModel;
-using CoffeeManagementSystem.Model.Enum;
-using Microsoft.EntityFrameworkCore.Storage;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
+﻿// <copyright file="IBaseService.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace CoffeeManagementSystem.Services.BaseServices
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Linq.Expressions;
+    using CoffeeManagementSystem.Model.BaseModel;
+    using CoffeeManagementSystem.Model.Enum;
+    using Microsoft.EntityFrameworkCore.Storage;
+
     public interface IBaseServices : IDisposable
     {
         IQueryable<T> GetQueryable<T>() where T : BaseTable;

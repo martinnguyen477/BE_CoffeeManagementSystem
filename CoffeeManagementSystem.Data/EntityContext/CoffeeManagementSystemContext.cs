@@ -8,6 +8,7 @@ namespace CoffeeManagementSystem.Data.EntityContext
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.Linq;
+    using CoffeeManagementSystem.Data.ModelDataDefault;
     using CoffeeManagementSystem.Model.BaseModel;
     using CoffeeManagementSystem.Model.Common;
     using CoffeeManagementSystem.Model.EntitiesModel;
@@ -20,7 +21,7 @@ namespace CoffeeManagementSystem.Data.EntityContext
     public class CoffeeManagementSystemContext : DbContext
     {
         /// <summary>
-        /// OnConfiguring.
+        /// OnConfiguring. Cấu hình chuỗi kết nối đến sql server.
         /// </summary>
         /// <param name="optionsBuilder">optionsBuilder.</param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -59,6 +60,7 @@ namespace CoffeeManagementSystem.Data.EntityContext
         #endregion
 
         #region ModelBuilder
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<AttributeEntities>().ToTable("Attribute").HasKey(x => x.Id);
@@ -75,6 +77,7 @@ namespace CoffeeManagementSystem.Data.EntityContext
             modelBuilder.Entity<PostitonEntities>().ToTable("Postiton").HasKey(x => x.Id);
             modelBuilder.Entity<ProductEntities>().ToTable("Product").HasKey(x => x.Id);
             modelBuilder.Entity<SlideEntities>().ToTable("Slide").HasKey(x => x.Id);
+            modelBuilder.SeedDataDefault();
         }
 
         #endregion
@@ -87,23 +90,30 @@ namespace CoffeeManagementSystem.Data.EntityContext
         /// <returns>save.</returns>
         public override int SaveChanges()
         {
+            //lấy ngày giờ hiện tại.
             var dateNow = DateTime.Now;
+            //?
             var errorList = new List<ValidationResult>();
 
+            //Theo dõi thay đổi khi add hoặc modified.
             var entries = ChangeTracker.Entries().Where(p => p.State == EntityState.Added ||
              p.State == EntityState.Modified).ToList();
 
             foreach (var entry in entries)
             {
                 var entity = entry.Entity;
+
+                //Nếu entry state(trạng thái) là thêm
                 if (entry.State == EntityState.Added)
                 {
+                    
                     if (entity is BaseTable itemBase)
                     {
                         itemBase.CreateDate = itemBase.UpdateDate = dateNow;
                         itemBase.Status = StatusSystem.Active;
                     }
                 }
+                //Ngược lại nếu mà entry state(trạng thái) là thay đổi. 
                 else if (entry.State == EntityState.Modified)
                 {
                     if (entity is BaseTable itemBase)
@@ -121,7 +131,7 @@ namespace CoffeeManagementSystem.Data.EntityContext
             }
 
             return base.SaveChanges();
-            #endregion
         }
+        #endregion
     }
 }

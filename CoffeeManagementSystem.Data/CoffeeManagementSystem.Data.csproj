@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="EntityContext\" />
+    <ProjectReference Include="..\CoffeeManagementSystem.Model\CoffeeManagementSystem.Model.csproj" />
   </ItemGroup>
 
 </Project>

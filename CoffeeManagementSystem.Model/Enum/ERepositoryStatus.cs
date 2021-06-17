@@ -1,5 +1,8 @@
 ﻿namespace CoffeeManagementSystem.Model.Enum
 {
+    /// <summary>
+    /// Enum này là 
+    /// </summary>
     public enum ERepositoryStatus
     {
         /// <summary>

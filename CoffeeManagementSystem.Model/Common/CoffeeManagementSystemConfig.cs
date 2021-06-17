@@ -7,7 +7,7 @@ namespace CoffeeManagementSystem.Model.Common
     using System;
 
     /// <summary>
-    /// Config.
+    /// Class này là class config. Khi cần các config thì gọi hàm này.
     /// </summary>
     public class CoffeeManagementSystemConfig
     {
