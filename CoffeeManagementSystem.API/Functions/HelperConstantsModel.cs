@@ -48,8 +48,9 @@ namespace CoffeeManagementSystem.API.Functions
             CoffeeManagementSystemConfig.DefaultPassword = section.GetValue<string>("DefaultPassword");
             CoffeeManagementSystemConfig.NumberGeneratePassword = section.GetValue<int>("NumberGeneratePassword");
             CoffeeManagementSystemConfig.EmailTemplateUrl = section.GetValue<string>("EmailTemplateUrl");
-            CoffeeManagementSystemConfig.UrlDefaultOfPrefect = section.GetValue<string>("UrlDefaultOfPrefect");
-            CoffeeManagementSystemConfig.UrlDefaultOfStudent = section.GetValue<string>("UrlDefaultOfStudent");
+            CoffeeManagementSystemConfig.DefaultUrlImageCategory = section.GetValue<string>("DefaultUrlImageCategory");
+            CoffeeManagementSystemConfig.DefaultUrlImageProduct = section.GetValue<string>("DefaultUrlImageProduct");
+            CoffeeManagementSystemConfig.DefaultUrlImageSlide = section.GetValue<string>("DefaultUrlImageSlide");
             CoffeeManagementSystemConfig.UrlDefaultOfUser = section.GetValue<string>("UrlDefaultOfUser");
             CoffeeManagementSystemConfig.NotedImportExampoint = section.GetValue<string>("NotedImportExampoint");
 

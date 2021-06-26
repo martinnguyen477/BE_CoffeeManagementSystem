@@ -1,13 +1,15 @@
-﻿// <copyright file="PostitonModel.cs" company="PlaceholderCompany">
+﻿// <copyright file="PostitonEntities.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace CoffeeManagementSystem.Model.Model
+namespace CoffeeManagementSystem.Model.EntitiesModel
 {
+    using CoffeeManagementSystem.Model.BaseModel;
+
     /// <summary>
     /// Thực thể Vị trí.
     /// </summary>
-    public class PostitonModel
+    public class PositionEntities : BaseTableWithId
     {
         /// <summary>
         /// Gets or sets tên vị trí.

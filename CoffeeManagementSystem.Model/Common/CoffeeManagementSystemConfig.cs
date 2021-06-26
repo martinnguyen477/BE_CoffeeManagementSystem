@@ -152,12 +152,17 @@ namespace CoffeeManagementSystem.Model.Common
         /// <summary>
         /// Gets or Sets UrlDefaultOfPrefect.
         /// </summary>
-        public static string UrlDefaultOfPrefect { get; set; }
+        public static string DefaultUrlImageCategory { get; set; }
 
         /// <summary>
         /// Gets or Sets UrlDefaultOfStudent.
         /// </summary>
-        public static string UrlDefaultOfStudent { get; set; }
+        public static string DefaultUrlImageProduct { get; set; }
+
+        /// <summary>
+        /// Gets or sets defaultUrlImageSlide.
+        /// </summary>
+        public static string DefaultUrlImageSlide { get; set; }
 
         /// <summary>
         /// Gets or Sets UrlDefaultOfUser.

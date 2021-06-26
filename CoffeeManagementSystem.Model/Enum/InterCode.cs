@@ -139,5 +139,26 @@ namespace CoffeeManagementSystem.Model.Enum
         /// InsertExamStudentError.
         /// </summary>
         public string InsertExamStudentError = "CoffeeManagementSystem_026";
+
+        /// <summary>
+        /// DeleteCategorySuccess.
+        /// </summary>
+        public string DeleteCategorySuccess = "CoffeeManagementSystem_027";
+
+        /// <summary>
+        /// DeleteCategoryError.
+        /// </summary>
+        public string DeleteCategoryError = "CoffeeManagementSystem_028";
+
+        /// <summary>
+        /// DeleteProductSuccess.
+        /// </summary>
+        public string DeleteProductSuccess = "CoffeeManagementSystem_029";
+
+        /// <summary>
+        /// DeleteProductError.
+        /// </summary>
+        public string DeleteProductError = "CoffeeManagementSystem_030";
     }
+
 }

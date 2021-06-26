@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿// <copyright file="InternalMessenger.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace CoffeeManagementSystem.Model.Enum
 {
@@ -40,11 +40,34 @@ namespace CoffeeManagementSystem.Model.Enum
 
         public string CheckPasswordSuccess = "Password is correct";
         public string CheckPasswordError = "Password is not correct";
-        public string CreateCategoryError = "Tạo loại không thành công";
-        public string UpdateCategoryError = "Tạo loại không thành công";
-        public string DeleteCategorySuccess = "Xóa Category thành công";
-        public string DeleteCategoryError = "Xóa Category không thành công";
-        public string GetCategoryError = "Lấy danh sách Category không thành công";
-        public string GetCategorySuccess = "Lấy danh sách Category thành công";
+
+
+
+        #region Message Of Category
+        public string CreateCategoryError = "Tạo loại không thành công.";
+        public string CreateCategoryNameIsNull = "Không được để trống tên loại.";
+        public string UpdateCategoryError = "Tạo loại không thành công.";
+        public string DeleteCategorySuccess = "Xóa Category thành công.";
+        public string DeleteCategoryError = "Không tìm thấy Category này.";
+        public string GetCategoryNoExists = "Không có Category nào trong hệ thống.";
+        public string GetCategorySuccess = "Lấy danh sách Category thành công.";
+        public string GetCategoryByIdSuccess = "Lấy Category chi tiết thành công.";
+        public string GetCategoryByIdError = "Lấy Category chi tiết không thành công.";
+        #endregion
+
+        #region Message Of Account
+        public string InsertRoleForGroupUserUnSuccess = "Thêm quyền cho nhóm người dùng không thành công";
+        public string InsertRoleForGroupUserSuccess = "Thêm quyền cho nhóm người dùng thành công";
+        public string InsertRoleForGroupUserError = "Thêm quyền cho nhóm người dùng lỗi";
+        public string InsertUserExist = "Tài khoản người dùng đã tồn tại";
+        public string GetInfoUserSuccess = "Lấy thông tin người dùng thành công";
+        public string GetInfoUserUnSuccess = "Lấy thông tin người dùng không thành công";
+        #endregion
+
+        #region Message Of Product
+        public string InsertProductError = "Thêm sản phẩm thất bại";
+        public string DeleteProductSucess = "Xóa sản phẩm thành công";
+        public string DeleteProductError = "Xóa sản phẩm thất bại";
+        #endregion
     }
 }

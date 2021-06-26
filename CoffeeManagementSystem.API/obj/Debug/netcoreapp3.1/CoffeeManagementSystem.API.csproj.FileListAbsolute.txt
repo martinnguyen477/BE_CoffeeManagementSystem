@@ -39,7 +39,6 @@ C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.API\bin\Debug\
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.API\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.API\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.API\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.API.csprojAssemblyReference.cache
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.API\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.API.AssemblyInfoInputs.cache
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.API\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.API.AssemblyInfo.cs
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.API\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.API.csproj.CoreCompileInputs.cache
@@ -117,3 +116,4 @@ C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.API\bin\Debug\
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.WebEncoders.dll
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.API\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\CoffeeManagementSystem.API\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.API.csproj.AssemblyReference.cache

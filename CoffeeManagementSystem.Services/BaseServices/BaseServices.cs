@@ -201,6 +201,20 @@ namespace CoffeeManagementSystem.Services.BaseServices
             return true;
         }
 
+        private bool BulkDelete<T>(DbContext pContext, List<T> pObjInsertList)
+            where T : BaseTableWithId
+        {
+            DateTime now = DateTime.Now;
+            pObjInsertList.ForEach(p =>
+            {
+                p.CreateDate = now;
+                p.UpdateDate = now;
+            });
+
+            pContext.BulkDelete(pObjInsertList);
+            return true;
+        }
+
         private bool BulkUpdate<T>(DbContext pContext, List<T> pObjInsertList)
             where T : BaseTableWithId
         {
@@ -398,6 +412,25 @@ namespace CoffeeManagementSystem.Services.BaseServices
             }
         }
 
+        public bool Delete<T>(Expression<Func<T, bool>> predicate) where T : BaseTable
+        {
+            using var transaction = Context.Database.BeginTransaction();
+            try
+            {
+                var obj = Context.Set<T>().SingleOrDefault(predicate);
+                obj.Status = 0;
+                Context.Entry(obj).State = EntityState.Deleted;
+                Context.SaveChanges();
+                transaction.Commit();
+                return true;
+            }
+            catch (SystemException ex)
+            {
+                Context.Database.RollbackTransaction();
+                throw new CoffeeManagementSystemException(ex.Message);
+            }
+        }
+
         public bool Delete<T>(params object[] pKeys) where T : BaseTable
         {
             using var transaction = Context.Database.BeginTransaction();
@@ -426,6 +459,30 @@ namespace CoffeeManagementSystem.Services.BaseServices
             return Context.Model.FindEntityType(typeof(T))
                 .FindPrimaryKey().Properties
                 .Select(x => x.Name).ToArray();
+        }
+
+        public bool BulkDeleteExcel<T>(List<T> pObjInsertList) where T : BaseTableWithId
+        {
+            var transaction = Context.Database.BeginTransaction();
+            using (transaction)
+            {
+                try
+                {
+                    bool isOk = this.BulkDelete(Context, pObjInsertList);
+                    if (isOk)
+                    {
+                        transaction.Commit();
+                        return true;
+                    }
+
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw new CoffeeManagementSystemException(ex.Message);
+                }
+            }
         }
 
         #endregion Private Base

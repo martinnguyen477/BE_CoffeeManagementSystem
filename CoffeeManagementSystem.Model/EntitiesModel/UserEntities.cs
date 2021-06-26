@@ -1,4 +1,4 @@
-﻿// <copyright file="EmployeeEntities.cs" company="PlaceholderCompany">
+﻿// <copyright file="UserEntities.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
@@ -8,9 +8,9 @@ namespace CoffeeManagementSystem.Model.EntitiesModel
     using CoffeeManagementSystem.Model.BaseModel;
 
     /// <summary>
-    /// Thực thể Nhân Viên.
+    /// Thực thể User.
     /// </summary>
-    public class EmployeeEntities : BaseTableWithId
+    public class UserEntities : BaseTableWithId
     {
         /// <summary>
         /// Gets or sets tên.
@@ -21,11 +21,6 @@ namespace CoffeeManagementSystem.Model.EntitiesModel
         /// Gets or sets Họ.
         /// </summary>
         public string LastName { get; set; }
-
-        /// <summary>
-        /// Gets or sets image.
-        /// </summary>
-        public string Image { get; set; }
 
         /// <summary>
         /// Gets or sets gioi tính.
@@ -58,18 +53,23 @@ namespace CoffeeManagementSystem.Model.EntitiesModel
         public string UserName { get; set; }
 
         /// <summary>
-        /// Gets or sets mã vị trí.
-        /// </summary>
-        public int PositionId { get; set; }
-
-        /// <summary>
-        /// Gets or sets chi nhánh.
-        /// </summary>
-        public int BranchId { get; set; }
-
-        /// <summary>
         /// Gets or sets mật Khẩu.
         /// </summary>
         public string Password { get; set; }
+
+        /// <summary>
+        /// Gets or sets nhóm người dùng.
+        /// </summary>
+        public int GroupUser { get; set; }
+
+        /// <summary>
+        /// Gets or sets hình đại diện.
+        /// </summary>
+        public string AvartarUrl { get; set; }
+
+        /// <summary>
+        /// Gets or sets mã public trên cloud.
+        /// </summary>
+        public string PublicId { get; set; }
     }
 }

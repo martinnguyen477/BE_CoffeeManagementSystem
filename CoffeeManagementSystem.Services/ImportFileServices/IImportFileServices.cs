@@ -4,8 +4,10 @@
 
 namespace CoffeeManagementSystem.Services.ImportFileServices
 {
+    using System.Collections.Generic;
     using System.Threading.Tasks;
     using CloudinaryDotNet.Actions;
+    using CoffeeManagementSystem.Model.Model;
     using CoffeeManagementSystem.Model.Response;
     using CoffeeManagementSystem.Services.BaseServices;
     using Microsoft.AspNetCore.Http;
@@ -21,6 +23,8 @@ namespace CoffeeManagementSystem.Services.ImportFileServices
         /// <param name="apiSecret">API secret trên cloud.</param>
         /// <returns></returns>
         Task<ResponseUploadImageCloud> AddPhotoCloudAsync(IFormFile formFile, string cloudName, string apiKey, string apiSecret);
+        
+        List<ImageProductModel> AddListPhotoCloudAsync(List<IFormFile> listImage, string cloudName, string apiKey, string apiSecret, int productId);
 
         /// <summary>
         /// Hàm xóa hình ảnh trên cloud.

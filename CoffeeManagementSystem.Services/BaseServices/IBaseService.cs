@@ -52,8 +52,12 @@ namespace CoffeeManagementSystem.Services.BaseServices
 
         bool Delete<T>(params object[] pKeys) where T : BaseTable;
 
+        public bool Delete<T>(Expression<Func<T, bool>> predicate) where T : BaseTable;
+
         bool BulkInsertExcel<T>(List<T> pObjInsertList) where T : BaseTableWithId;
 
         bool BulkUpdateExcel<T>(List<T> pObjInsertList) where T : BaseTableWithId;
+
+        bool BulkDeleteExcel<T>(List<T> pObjInsertList) where T : BaseTableWithId;
     }
 }

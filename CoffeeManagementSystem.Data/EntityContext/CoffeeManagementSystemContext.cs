@@ -45,13 +45,9 @@ namespace CoffeeManagementSystem.Data.EntityContext
 
         public virtual DbSet<CategoryEntities> Category { get; set; }
 
-        public virtual DbSet<CustomerEntities> Customer { get; set; }
-
-        public virtual DbSet<EmployeeEntities> Employee { get; set; }
-
         public virtual DbSet<OrderDetailEntities> OrderDetail { get; set; }
 
-        public virtual DbSet<PostitonEntities> Postiton { get; set; }
+        public virtual DbSet<PositionEntities> Postiton { get; set; }
 
         public virtual DbSet<ProductEntities> Product { get; set; }
 
@@ -70,13 +66,16 @@ namespace CoffeeManagementSystem.Data.EntityContext
             modelBuilder.Entity<CartEntities>().ToTable("Cart").HasKey(x => x.Id);
             modelBuilder.Entity<CartItemEntities>().ToTable("CartItem").HasKey(x => new { x.CartId, x.ProductId });
             modelBuilder.Entity<CategoryEntities>().ToTable("Category").HasKey(x => x.Id);
-            modelBuilder.Entity<CustomerEntities>().ToTable("Customer").HasKey(x => x.Id);
-            modelBuilder.Entity<EmployeeEntities>().ToTable("Employee").HasKey(x => x.Id);
+            modelBuilder.Entity<CredentialUserEntities>().ToTable("CredentialUser").HasKey(x => x.Id);
+            modelBuilder.Entity<GroupUserEntities>().ToTable("GroupUser").HasKey(x => x.Id);
+            modelBuilder.Entity<ImageProductEntities>().ToTable("ImageProduct").HasKey(x => x.Id);
             modelBuilder.Entity<OrderDetailEntities>().ToTable("OrderDetail").HasKey(x => new { x.ProductId, x.OrderId });
             modelBuilder.Entity<OrderEntities>().ToTable("Order").HasKey(x => x.Id);
-            modelBuilder.Entity<PostitonEntities>().ToTable("Postiton").HasKey(x => x.Id);
+            modelBuilder.Entity<PositionEntities>().ToTable("Position").HasKey(x => x.Id);
             modelBuilder.Entity<ProductEntities>().ToTable("Product").HasKey(x => x.Id);
+            modelBuilder.Entity<RoleEntities>().ToTable("Role").HasKey(x => x.Id);
             modelBuilder.Entity<SlideEntities>().ToTable("Slide").HasKey(x => x.Id);
+            modelBuilder.Entity<UserEntities>().ToTable("User").HasKey(x => x.Id);
             modelBuilder.SeedDataDefault();
         }
 

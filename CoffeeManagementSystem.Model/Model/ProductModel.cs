@@ -4,15 +4,22 @@
 
 namespace CoffeeManagementSystem.Model.Model
 {
+    using CoffeeManagementSystem.Model.BaseModel;
+
     /// <summary>
     /// Thực thể sản phẩm.
     /// </summary>
-    public class ProductModel
+    public class ProductModel : BaseTableWithId
     {
         /// <summary>
         /// Gets or sets tên sản phẩm.
         /// </summary>
         public string ProductName { get; set; }
+
+        /// <summary>
+        /// Mã của ảnh up cloud.
+        /// </summary>
+        public string PublicId { get; set; }
 
         /// <summary>
         /// Gets or sets ảnh sản phẩm.

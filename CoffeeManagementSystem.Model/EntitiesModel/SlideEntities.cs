@@ -17,8 +17,13 @@ namespace CoffeeManagementSystem.Model.EntitiesModel
         public string SlideName { get; set; }
 
         /// <summary>
+        /// Gets or sets khóa công khai của image cloud.
+        /// </summary>
+        public string PublicId { get; set; }
+
+        /// <summary>
         /// Gets or sets hình ảnh Slide.
         /// </summary>
-        public string SlideImage { get; set; }
+        public string UrlSlideImage { get; set; }
     }
 }

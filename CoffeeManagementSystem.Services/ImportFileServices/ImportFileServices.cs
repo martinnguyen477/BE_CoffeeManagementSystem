@@ -4,11 +4,14 @@
 
 namespace CoffeeManagementSystem.Services.ImportFileServices
 {
+    using System.Collections.Generic;
+    using System.IO;
     using System.Threading.Tasks;
     using AutoMapper;
     using CloudinaryDotNet;
     using CloudinaryDotNet.Actions;
     using CoffeeManagementSystem.Data.EntityContext;
+    using CoffeeManagementSystem.Model.Model;
     using CoffeeManagementSystem.Model.Response;
     using Microsoft.AspNetCore.Http;
 
@@ -58,7 +61,7 @@ namespace CoffeeManagementSystem.Services.ImportFileServices
                 var uploadParams = new ImageUploadParams
                 {
                     File = new FileDescription(formFile.FileName, streams),
-                    Transformation = new Transformation().Height(500).Width(500).Crop("fill").Gravity("face"),
+                    Transformation = new Transformation().Height(1000).Width(1000).Crop("fill").Gravity("face"),
                     //test thử
                     //PublicId = "myfolder/mysubfolder/Category"
                 };
@@ -99,6 +102,40 @@ namespace CoffeeManagementSystem.Services.ImportFileServices
             return result;
         }
 
+        #endregion
+
+        #region Add List Photo Cloud Async
+        public List<ImageProductModel> AddListPhotoCloudAsync(List<IFormFile> listImage, string cloudName, string apiKey, string apiSecret,int productId)
+        {
+            var accountCloud = new Account(cloudName, apiKey, apiSecret);
+            _cloudinary = new Cloudinary(accountCloud);
+
+            var uploadResult = new ImageUploadResult();
+
+            List<ImageProductModel> resultData = new List<ImageProductModel>();
+            ImageProductModel resultRespone = new ImageProductModel();
+            for (int indexResult = 0; indexResult < listImage.Count; indexResult ++)
+            {
+                if (listImage[indexResult].Length > 0)
+                {
+                    using var streams = listImage[indexResult].OpenReadStream();
+
+                    var uploadParams = new ImageUploadParams
+                    {
+                        File = new FileDescription(listImage[indexResult].FileName, streams),
+                        Transformation = new Transformation().Height(500).Width(500).Crop("fill").Gravity("face"),
+                       
+                    };
+                    uploadResult = _cloudinary.Upload(uploadParams);
+                }
+                
+                resultRespone.ProductId = productId;
+                resultRespone.UrlImage = uploadResult.SecureUrl.AbsoluteUri;
+                resultRespone.PublicId = uploadResult.PublicId;
+                resultData.Add(resultRespone);
+            }    
+            return resultData;
+        }
         #endregion
     }
 }

@@ -47,6 +47,18 @@ namespace CoffeeManagementSystem.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Attribute");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AttributeName = "Size",
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        });
                 });
 
             modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.AttributeValueBillDetailEntities", b =>
@@ -114,6 +126,294 @@ namespace CoffeeManagementSystem.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("AttributeValue");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 28000m,
+                            ProductId = 1,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "S"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 35000m,
+                            ProductId = 1,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "M"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 38000m,
+                            ProductId = 1,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "XL"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 18000m,
+                            ProductId = 2,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "S"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 25000m,
+                            ProductId = 2,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "M"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 30000m,
+                            ProductId = 2,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "XL"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 23000m,
+                            ProductId = 3,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "S"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 28000m,
+                            ProductId = 3,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "M"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 30000m,
+                            ProductId = 4,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "M"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 35000m,
+                            ProductId = 4,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "XL"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 25000m,
+                            ProductId = 5,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "M"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 27000m,
+                            ProductId = 6,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "S"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 32000m,
+                            ProductId = 6,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "M"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 30000m,
+                            ProductId = 7,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "S"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 32000m,
+                            ProductId = 7,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "M"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 35000m,
+                            ProductId = 7,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "XL"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 36000m,
+                            ProductId = 8,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "M"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 33000m,
+                            ProductId = 9,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "L"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 32000m,
+                            ProductId = 10,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "XL"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 23000m,
+                            ProductId = 11,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "S"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 30000m,
+                            ProductId = 12,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "M"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Price = 35000m,
+                            ProductId = 12,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "XL"
+                        });
                 });
 
             modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.BranchEntities", b =>
@@ -264,11 +564,11 @@ namespace CoffeeManagementSystem.Data.Migrations
                             CategoryName = "Đá xay ",
                             CreateBy = 1,
                             CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            PublicIdImage = "mka6z4skydw4ooqhspt5",
+                            PublicIdImage = "cvz5jcwk0zhlrzgre2kn",
                             Status = 1,
                             UpdateBy = 1,
                             UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            UrlImageCategory = "https://res.cloudinary.com/nqcuong720/image/upload/v1623774698/mka6z4skydw4ooqhspt5.jpg"
+                            UrlImageCategory = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726517/cvz5jcwk0zhlrzgre2kn.png"
                         },
                         new
                         {
@@ -276,11 +576,11 @@ namespace CoffeeManagementSystem.Data.Migrations
                             CategoryName = "Chocolate",
                             CreateBy = 1,
                             CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            PublicIdImage = "mka6z4skydw4ooqhspt5",
+                            PublicIdImage = "cvz5jcwk0zhlrzgre2kn",
                             Status = 1,
                             UpdateBy = 1,
                             UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            UrlImageCategory = "https://res.cloudinary.com/nqcuong720/image/upload/v1623774698/mka6z4skydw4ooqhspt5.jpg"
+                            UrlImageCategory = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726517/cvz5jcwk0zhlrzgre2kn.png"
                         },
                         new
                         {
@@ -288,11 +588,11 @@ namespace CoffeeManagementSystem.Data.Migrations
                             CategoryName = "Matcha",
                             CreateBy = 1,
                             CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            PublicIdImage = "mka6z4skydw4ooqhspt5",
+                            PublicIdImage = "cvz5jcwk0zhlrzgre2kn",
                             Status = 1,
                             UpdateBy = 1,
                             UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            UrlImageCategory = "https://res.cloudinary.com/nqcuong720/image/upload/v1623774698/mka6z4skydw4ooqhspt5.jpg"
+                            UrlImageCategory = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726517/cvz5jcwk0zhlrzgre2kn.png"
                         },
                         new
                         {
@@ -300,11 +600,11 @@ namespace CoffeeManagementSystem.Data.Migrations
                             CategoryName = "Trà Trái Cây",
                             CreateBy = 1,
                             CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            PublicIdImage = "mka6z4skydw4ooqhspt5",
+                            PublicIdImage = "cvz5jcwk0zhlrzgre2kn",
                             Status = 1,
                             UpdateBy = 1,
                             UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            UrlImageCategory = "https://res.cloudinary.com/nqcuong720/image/upload/v1623774698/mka6z4skydw4ooqhspt5.jpg"
+                            UrlImageCategory = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726517/cvz5jcwk0zhlrzgre2kn.png"
                         },
                         new
                         {
@@ -312,23 +612,23 @@ namespace CoffeeManagementSystem.Data.Migrations
                             CategoryName = "Trà Sữa",
                             CreateBy = 1,
                             CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            PublicIdImage = "mka6z4skydw4ooqhspt5",
+                            PublicIdImage = "cvz5jcwk0zhlrzgre2kn",
                             Status = 1,
                             UpdateBy = 1,
                             UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            UrlImageCategory = "https://res.cloudinary.com/nqcuong720/image/upload/v1623774698/mka6z4skydw4ooqhspt5.jpg"
+                            UrlImageCategory = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726517/cvz5jcwk0zhlrzgre2kn.png"
                         },
                         new
                         {
-                            Id = 7,
+                            Id = 6,
                             CategoryName = "Cafe",
                             CreateBy = 1,
                             CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            PublicIdImage = "mka6z4skydw4ooqhspt5",
+                            PublicIdImage = "cvz5jcwk0zhlrzgre2kn",
                             Status = 1,
                             UpdateBy = 1,
                             UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            UrlImageCategory = "https://res.cloudinary.com/nqcuong720/image/upload/v1623774698/mka6z4skydw4ooqhspt5.jpg"
+                            UrlImageCategory = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726517/cvz5jcwk0zhlrzgre2kn.png"
                         },
                         new
                         {
@@ -336,26 +636,20 @@ namespace CoffeeManagementSystem.Data.Migrations
                             CategoryName = "Sinh tố",
                             CreateBy = 1,
                             CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            PublicIdImage = "mka6z4skydw4ooqhspt5",
+                            PublicIdImage = "cvz5jcwk0zhlrzgre2kn",
                             Status = 1,
                             UpdateBy = 1,
                             UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            UrlImageCategory = "https://res.cloudinary.com/nqcuong720/image/upload/v1623774698/mka6z4skydw4ooqhspt5.jpg"
+                            UrlImageCategory = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726517/cvz5jcwk0zhlrzgre2kn.png"
                         });
                 });
 
-            modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.CustomerEntities", b =>
+            modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.CredentialUserEntities", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("BirthDay")
-                        .HasColumnType("datetime2");
 
                     b.Property<int>("CreateBy")
                         .HasColumnType("int");
@@ -363,25 +657,13 @@ namespace CoffeeManagementSystem.Data.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("GroupUserId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("RolesId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("Image")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NumberPhone")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Sex")
+                    b.Property<string>("RolesName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Status")
@@ -393,29 +675,17 @@ namespace CoffeeManagementSystem.Data.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
-                    b.ToTable("Customer");
+                    b.ToTable("CredentialUser");
                 });
 
-            modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.EmployeeEntities", b =>
+            modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.GroupUserEntities", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("BirthDay")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("BranchId")
-                        .HasColumnType("int");
 
                     b.Property<int>("CreateBy")
                         .HasColumnType("int");
@@ -423,28 +693,7 @@ namespace CoffeeManagementSystem.Data.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Image")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NumberPhone")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("PositionId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Sex")
+                    b.Property<string>("GroupUserName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Status")
@@ -456,12 +705,87 @@ namespace CoffeeManagementSystem.Data.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("UserName")
+                    b.HasKey("Id");
+
+                    b.ToTable("GroupUser");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            GroupUserName = "Admin System",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            GroupUserName = "Manager",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            GroupUserName = "Staff",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            GroupUserName = "Customer",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        });
+                });
+
+            modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.ImageProductEntities", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CreateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PublicId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UpdateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UrlImage")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Employee");
+                    b.ToTable("ImageProduct");
                 });
 
             modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.OrderDetailEntities", b =>
@@ -555,7 +879,7 @@ namespace CoffeeManagementSystem.Data.Migrations
                     b.ToTable("Order");
                 });
 
-            modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.PostitonEntities", b =>
+            modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.PositionEntities", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -582,7 +906,7 @@ namespace CoffeeManagementSystem.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Postiton");
+                    b.ToTable("Position");
                 });
 
             modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.ProductEntities", b =>
@@ -613,8 +937,8 @@ namespace CoffeeManagementSystem.Data.Migrations
                     b.Property<string>("ProductName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("ProductPrice")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<string>("PublicId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -628,6 +952,405 @@ namespace CoffeeManagementSystem.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Product");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoryId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "Vẫn vị đào quen thuộc, nhưng được khoác lên mình một dáng vẻ đầy thanh mát và giải khát hơn.Kết hợp với mứt berry và lớp kem béo ngậy nhưng ngọt dịu,cho hương vị tươi mới và lôi cuốn,kích thích vị giác đầy thú vị ngay lần đầu thưởng thức.",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "ĐÀO VIỆT QUẤT ĐÁ XAY",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoryId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "Sự kết hợp hài hoà giữa những nguyên liệu mộc mạc rất đỗi quen thuộc đối với người Việt cho một thức uống thanh mát, giải nhiệt lại tốt cho sức khoẻ.",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "CHANH SẢ ĐÁ XAY",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoryId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "Một phiên bản nâng cấp từ ly cà phê sữa quen thuộc, nhưng lại đầy tỉnh táo và tươi mát hơn bởi lớp đá xay mát lạnh đi kèm. Nhấp 1 ngụm là thấy đã, ngụm thứ hai thêm tỉnh táo và cứ thế lôi cuốn bạn đến giọt cuối cùng.",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "CÀ PHÊ ĐÁ XAY",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CategoryId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "Mứt Việt Quất chua thanh, ngòn ngọt, phối hợp nhịp nhàng với dòng sữa chua bổ dưỡng. Là món sinh tố thơm ngon mà cả đầu lưỡi và làn da đều thích.",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "SINH TỐ VIỆT QUẤT",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CategoryId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "Tê tái ngay đầu lưỡi bởi sự mát lạnh của đá xay. Hòa quyện thêm hương vị chua chua, ngọt ngọt từ trái cam tươi và trái phúc bồn tử 100% tự nhiên, để cho ra một hương vị thanh mát, kích thích vị giác đầy thú vị ngay từ lần đầu thưởng thức. Lại thêm một lựa chọn mới cho \"team đá xay\" và team trái cây, còn chần chờ gì nữa mà không thử ngay thôi!",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "PHÚC BỒN TỬ CAM ĐÁ XAY",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CategoryId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "Những mẩu bánh cookies giòn rụm kết hợp ăn ý với sữa tươi và kem tươi béo ngọt, đem đến cảm giác lạ miệng gây thích thú. Một món uống phá cách dễ thương.",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "COOKIES ĐÁ XAY",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CategoryId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "Matcha thanh, nhẫn, và đắng nhẹ được nhân đôi sảng khoái khi uống lạnh. Nhấn nhá thêm những nét bùi béo của kem và sữa. Gây thương nhớ vô cùng!",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "MATCHA ĐÁ XAY",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CategoryId = 4,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "Trà Long Nhãn Hạt Chia",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CategoryId = 4,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "Sự kết hợp của Trà hương thơm nhẹ, vị nồng hậu cùng Hạt sen tươi mềm có vị ngọt, sáp, vừa ngon miệng vừa có tác dụng an thần, tốt cho cơ thể.",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "TRÀ HẠT SEN",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CategoryId = 4,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "Vị thanh ngọt của đào Hy Lạp, vị chua dịu của Cam Vàng nguyên vỏ, vị chát của trà đen tươi được ủ mới mỗi 4 tiếng, cùng hương thơm nồng đặc trưng của sả chính là điểm sáng làm nên sức hấp dẫn của thức uống này. Sản phẩm hiện có 2 phiên bản Nóng và Lạnh phù hợp cho mọi thời gian trong năm.",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "TRÀ ĐÀO CAM SẢ",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CategoryId = 4,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "TRÀ SỮA MẮC CA TRÂN CHÂU",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CategoryId = 4,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "TRÀ PHÚC BỒN TỬ",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CategoryId = 4,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "Trà đen được ủ mới mỗi ngày, giữ nguyên được vị chát mạnh mẽ đặc trưng của lá trà, phủ bên trên là lớp Macchiato \"homemade\" bồng bềnh quyến rũ vị phô mai mặn mặn mà béo béo.",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "TRÀ ĐEN MACCHIATO",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CategoryId = 4,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = " ",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "HỒNG TRÀ SỮA TRÂN CHÂU",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CategoryId = 6,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "Americano được pha chế bằng cách thêm nước vào một hoặc hai shot Espresso để pha loãng độ đặc của cà phê, từ đó mang lại hương vị nhẹ nhàng, không gắt mạnh và vẫn thơm nồng nàn. 40,000 đ",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "AMERICANO",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CategoryId = 6,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "Theo chân những người gốc Hoa đến định cư tại Sài Gòn, Bạc sỉu là cách gọi tắt của \"Bạc tẩy sỉu phé\" trong tiếng Quảng Đông, chính là: Ly sữa trắng kèm một chút cà phê.",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "BẠC SỈU",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CategoryId = 6,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "Một tách cà phê đen thơm ngào ngạt, phảng phất mùi cacao là món quà tự thưởng tuyệt vời nhất cho những ai mê đắm tinh chất nguyên bản nhất của cà phê. Một tách cà phê trầm lắng, thi vị giữa dòng đời vồn vã.",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "CÀ PHÊ ĐEN",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 18,
+                            CategoryId = 6,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "Cà phê phin kết hợp cũng sữa đặc là một sáng tạo đầy tự hào của người Việt, được xem món uống thương hiệu của Việt Nam.",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "CÀ PHÊ SỮA",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 19,
+                            CategoryId = 6,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "Cappuccino được gọi vui là thức uống \"một - phần - ba\" - 1/3 Espresso, 1/3 Sữa nóng, 1/3 Foam.",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "CAPPUCCINO",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CategoryId = 6,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "Vị thơm béo của bọt sữa và sữa tươi, vị đắng thanh thoát của cà phê Espresso hảo hạng, và vị ngọt đậm của sốt caramel.",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "CARAMEL MACCHIATO",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 21,
+                            CategoryId = 6,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Description = "Một cốc Espresso nguyên bản được bắt đầu bởi những hạt Arabica chất lượng, phối trộn với tỉ lệ cân đối hạt Robusta, cho ra vị ngọt caramel, vị chua dịu và sánh đặc. Để đạt được sự kết hợp này, chúng tôi xay tươi hạt cà phê cho mỗi lần pha.",
+                            Discount = 20m,
+                            ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png",
+                            ProductName = "ESPRESSO",
+                            PublicId = "umggd5qbtmketrfid20r",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        });
+                });
+
+            modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.RoleEntities", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CreateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("RoleName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UpdateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Role");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            RoleName = "Add Category",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            RoleName = "View Detail Category",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            RoleName = "Update Category",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            RoleName = "Update Status Category",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            RoleName = "General List Category",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        });
                 });
 
             modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.SlideEntities", b =>
@@ -643,7 +1366,7 @@ namespace CoffeeManagementSystem.Data.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("SlideImage")
+                    b.Property<string>("PublicId")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SlideName")
@@ -658,9 +1381,115 @@ namespace CoffeeManagementSystem.Data.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("UrlSlideImage")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Slide");
+                });
+
+            modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.UserEntities", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AvartarUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BirthDay")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CreateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("GroupUser")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NumberPhone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PublicId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sex")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UpdateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("User");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Address = "351A Lạc Long Quân Phường 5 Quận 11 TP.Hồ Chí Minh",
+                            BirthDay = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Email = "nqcuong720@gmail.com",
+                            FirstName = "Cường",
+                            GroupUser = 1,
+                            LastName = "Nguyễn",
+                            NumberPhone = "0377077630",
+                            Password = "d57587b0f5bbb0c3fe9d8cb16e97b0fe",
+                            Sex = "Nam",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            UserName = "nqcuong20"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Address = "Phường Lê Hồng Phong TP.Quảng Ngãi",
+                            BirthDay = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Email = "volengocdiep2000@gmail.com",
+                            FirstName = "Diệp",
+                            GroupUser = 2,
+                            LastName = "Võ",
+                            NumberPhone = "035458331",
+                            Password = "d57587b0f5bbb0c3fe9d8cb16e97b0fe",
+                            Sex = "Nữ",
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            UserName = "vlndiep20"
+                        });
                 });
 #pragma warning restore 612, 618
         }

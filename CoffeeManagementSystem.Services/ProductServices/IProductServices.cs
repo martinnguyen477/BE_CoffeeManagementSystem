@@ -5,10 +5,11 @@
 namespace CoffeeManagementSystem.Services.ProductServices
 {
     using CoffeeManagementSystem.Model.Model;
+    using CoffeeManagementSystem.Services.BaseServices;
     using Microsoft.AspNetCore.Http;
     using System.Collections.Generic;
 
-    public interface IProductServices
+    public interface IProductServices : IBaseServices
     {
         /// <summary>
         /// Lấy tất cả products.
@@ -47,7 +48,7 @@ namespace CoffeeManagementSystem.Services.ProductServices
         /// <param name="Image">Hình đại diện.</param>
         /// <param name="ImagesDetail">Danh sách hình ảnh của sản phẩm.</param>
         /// <returns></returns>
-        ProductModel CreateProduct(ProductModel productModel, IFormFile Image, List<IFormFile> ImagesDetail);
+        ProductModel CreateProduct(ProductModel productModel, IFormFile avatarImage, List<IFormFile> ImagesDetail, string cloudName, string apiKey, string apiSerect);
 
         /// <summary>
         /// Thay đổi thông tin sản phẩm.
@@ -56,13 +57,13 @@ namespace CoffeeManagementSystem.Services.ProductServices
         /// <param name="Image">Hình ảnh đại diện.</param>
         /// <param name="ImagesDetail">Hình ảnh chi tiết.</param>
         /// <returns></returns>
-        ProductModel UpdateProduct(ProductModel productModel, IFormFile Image, List<IFormFile> ImagesDetail);
+        ProductModel UpdateProduct(ProductModel productModel, IFormFile avatarImage, List<IFormFile> ImagesDetail, string cloudName, string apiKey, string apiSerect);
 
         /// <summary>
         /// Xóa sản phẩm.
         /// </summary>
         /// <param name="productId">Id sản phẩm.</param>
         /// <returns></returns>
-        PostitonModel DeleteProduct(int productId);
+        bool DeleteProduct(int productId);
     }
 }
