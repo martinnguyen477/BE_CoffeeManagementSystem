@@ -17,14 +17,14 @@ namespace CoffeeManagementSystem.Model.EntitiesModel
         public string ProductName { get; set; }
 
         /// <summary>
+        /// Mã của ảnh up cloud.
+        /// </summary>
+        public string PublicId { get; set; }
+
+        /// <summary>
         /// Gets or sets ảnh sản phẩm.
         /// </summary>
         public string ProductImage { get; set; }
-
-        /// <summary>
-        /// Gets or sets giá sản phẩm.
-        /// </summary>
-        public decimal ProductPrice { get; set; }
 
         /// <summary>
         /// Gets or sets mô tả.

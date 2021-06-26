@@ -1,14 +1,17 @@
-﻿using CoffeeManagementSystem.Model.BaseModel;
-using CoffeeManagementSystem.Model.Enum;
-using Microsoft.EntityFrameworkCore.Storage;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
+﻿// <copyright file="IBaseService.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace CoffeeManagementSystem.Services.BaseServices
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Linq.Expressions;
+    using CoffeeManagementSystem.Model.BaseModel;
+    using CoffeeManagementSystem.Model.Enum;
+    using Microsoft.EntityFrameworkCore.Storage;
+
     public interface IBaseServices : IDisposable
     {
         IQueryable<T> GetQueryable<T>() where T : BaseTable;
@@ -49,8 +52,12 @@ namespace CoffeeManagementSystem.Services.BaseServices
 
         bool Delete<T>(params object[] pKeys) where T : BaseTable;
 
+        public bool Delete<T>(Expression<Func<T, bool>> predicate) where T : BaseTable;
+
         bool BulkInsertExcel<T>(List<T> pObjInsertList) where T : BaseTableWithId;
 
         bool BulkUpdateExcel<T>(List<T> pObjInsertList) where T : BaseTableWithId;
+
+        bool BulkDeleteExcel<T>(List<T> pObjInsertList) where T : BaseTableWithId;
     }
 }

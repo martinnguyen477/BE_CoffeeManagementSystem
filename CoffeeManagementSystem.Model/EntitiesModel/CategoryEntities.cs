@@ -17,8 +17,13 @@ namespace CoffeeManagementSystem.Model.EntitiesModel
         public string CategoryName { get; set; }
 
         /// <summary>
+        /// Gets or sets đường dẫn PublicIdImage.
+        /// </summary>
+        public string PublicIdImage { get; set; }
+
+        /// <summary>
         /// Gets or sets hình ảnh của loại.
         /// </summary>
-        public string CategoryImage { get; set; }
+        public string UrlImageCategory { get; set; }
     }
 }

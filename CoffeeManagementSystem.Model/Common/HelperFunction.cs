@@ -5,7 +5,7 @@ namespace CoffeeManagementSystem.Model.Common
     public class HelperFunction
     {
         /// <summary>
-        /// ReturnUrlFilePathExport.
+        /// ReturnUrlFilePathExport. Hàm hỗ trợ export file excel.
         /// </summary>
         /// <param name="fileNameTemplate">fileNameTemplate.</param>
         /// <param name="fileNameExport">fileNameExport.</param>
