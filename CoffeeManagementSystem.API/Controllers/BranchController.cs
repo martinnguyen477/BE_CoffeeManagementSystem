@@ -1,42 +1,45 @@
-﻿// <copyright file="PositionController.cs" company="PlaceholderCompany">
+﻿// <copyright file="BranchController.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
 namespace CoffeeManagementSystem.API.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
     using AutoMapper;
     using CoffeeManagementSystem.API.Functions;
     using CoffeeManagementSystem.Model.BaseModel;
     using CoffeeManagementSystem.Model.Common;
+    using CoffeeManagementSystem.Model.EntitiesModel;
     using CoffeeManagementSystem.Model.Enum;
     using CoffeeManagementSystem.Model.Model;
     using CoffeeManagementSystem.Model.Request;
     using CoffeeManagementSystem.Model.Response;
-    using CoffeeManagementSystem.Services.PositionServices;
+    using CoffeeManagementSystem.Services.BranchServices;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Configuration;
-    using System;
-    using System.Collections.Generic;
 
-    public class PositionController : BaseController.BaseController
+    public class BranchController : BaseController.BaseController
     {
         #region Contructors, Variable
         private readonly IMapper _mapper;
-        private readonly IPositionServices _positionServices;
+        private readonly IBranchServices _branchServices;
         private readonly InterCode _internalCode = new InterCode();
         private readonly InternalMessenger _internalMessenger = new InternalMessenger();
 
-        public PositionController(IConfiguration configuration,IPositionServices positionServices, IMapper mapper)
+        public BranchController(IConfiguration configuration, IBranchServices branchServices, IMapper mapper)
         {
-            _positionServices = positionServices;
+            _branchServices = branchServices;
             _mapper = mapper;
             HelperConstants = new HelperConstantsModel(configuration);
         }
         #endregion
 
-        #region Get List Positions DONE TEST
+        #region Get List Brach DONE TEST
         [HttpGet]
-        public RepositoryModel<List<PositionModel>> GetListPositions(int pageSize, int pageNumber)
+        public RepositoryModel<List<BranchModel>> GetListBranchs(int pageSize, int pageNumber)
         {
             //Lấy tên Controller, Action, Key
             var controllerName = ControllerContext.ActionDescriptor.ControllerName;
@@ -44,26 +47,26 @@ namespace CoffeeManagementSystem.API.Controllers
             var key = DateTime.Now.ToString(CoffeeManagementSystemConfig.DateExpSqlFormat);
 
             //Khở tạo model này là success. Và create data = null.
-            RepositoryModel<List<PositionModel>> result = new RepositoryModel<List<PositionModel>>()
+            RepositoryModel<List<BranchModel>> result = new RepositoryModel<List<BranchModel>>()
             {
                 PartnerCode = _internalCode.SuccessFull,
                 RetCode = ERetCodeSystem.Successfull,
-                Data = new List<PositionModel>()
+                Data = new List<BranchModel>()
             };
 
             try
             {
-                var listPosition = _positionServices.GetListAllPosition(pageSize, pageNumber);
+                var listBranch = _branchServices.GetListBranchs(pageSize, pageNumber);
 
-                if (listPosition.Count > 0)
+                if (listBranch.Count > 0)
                 {
-                    result.Data = listPosition;
+                    result.Data = listBranch;
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
-                        InternalMessage = _internalMessenger.GetPositionSuccess,
+                        InternalMessage = _internalMessenger.GetBranchSuccess,
                         HttpCode = ERepositoryStatus.Success,
-                        SystemMessage = _internalMessenger.GetPositionSuccess
+                        SystemMessage = _internalMessenger.GetBranchSuccess
                     };
                 }
                 else
@@ -72,9 +75,9 @@ namespace CoffeeManagementSystem.API.Controllers
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
-                        InternalMessage = _internalMessenger.GetPositionNoExists,
+                        InternalMessage = _internalMessenger.GetBranchNoExists,
                         HttpCode = ERepositoryStatus.Error,
-                        SystemMessage = _internalMessenger.GetPositionNoExists
+                        SystemMessage = _internalMessenger.GetBranchNoExists
                     };
                 }
             }
@@ -94,9 +97,9 @@ namespace CoffeeManagementSystem.API.Controllers
         }
         #endregion
 
-        #region Get Positions Detail DONE TEST
+        #region Get List Brach Active DONE TEST
         [HttpGet]
-        public RepositoryModel<PositionDetailRespone> GetPositionDetail(int positionId)
+        public RepositoryModel<List<BranchModel>> GetListBranchsActive(int pageSize, int pageNumber)
         {
             //Lấy tên Controller, Action, Key
             var controllerName = ControllerContext.ActionDescriptor.ControllerName;
@@ -104,16 +107,76 @@ namespace CoffeeManagementSystem.API.Controllers
             var key = DateTime.Now.ToString(CoffeeManagementSystemConfig.DateExpSqlFormat);
 
             //Khở tạo model này là success. Và create data = null.
-            RepositoryModel<PositionDetailRespone> result = new RepositoryModel<PositionDetailRespone>()
+            RepositoryModel<List<BranchModel>> result = new RepositoryModel<List<BranchModel>>()
             {
                 PartnerCode = _internalCode.SuccessFull,
                 RetCode = ERetCodeSystem.Successfull,
-                Data = new PositionDetailRespone()
+                Data = new List<BranchModel>()
             };
 
             try
             {
-                if (positionId == 0)
+                var listBranch = _branchServices.GetListBranchsActive(pageSize, pageNumber);
+
+                if (listBranch.Count > 0)
+                {
+                    result.Data = listBranch;
+                    result.Messenger = new MessengerError()
+                    {
+                        TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
+                        InternalMessage = _internalMessenger.GetBranchSuccess,
+                        HttpCode = ERepositoryStatus.Success,
+                        SystemMessage = _internalMessenger.GetBranchSuccess
+                    };
+                }
+                else
+                {
+                    result.PartnerCode = _internalCode.GetDataError;
+                    result.Messenger = new MessengerError()
+                    {
+                        TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
+                        InternalMessage = _internalMessenger.GetBranchNoExists,
+                        HttpCode = ERepositoryStatus.Error,
+                        SystemMessage = _internalMessenger.GetBranchNoExists
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                result.RetCode = ERetCodeSystem.SystemError;
+                result.PartnerCode = _internalCode.SystemError;
+                result.Messenger = new MessengerError()
+                {
+                    TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
+                    InternalMessage = ex.Message,
+                    HttpCode = ERepositoryStatus.InternalError,
+                    SystemMessage = ex.ToString()
+                };
+            }
+            return result;
+        }
+        #endregion
+
+        #region Get Branch Detail DONE TEST
+        [HttpGet]
+        public RepositoryModel<BranchDetailResponse> GetBranchDetail(int branchId)
+        {
+            //Lấy tên Controller, Action, Key
+            var controllerName = ControllerContext.ActionDescriptor.ControllerName;
+            var actionName = ControllerContext.ActionDescriptor.ActionName;
+            var key = DateTime.Now.ToString(CoffeeManagementSystemConfig.DateExpSqlFormat);
+
+            //Khở tạo model này là success. Và create data = null.
+            RepositoryModel<BranchDetailResponse> result = new RepositoryModel<BranchDetailResponse>()
+            {
+                PartnerCode = _internalCode.SuccessFull,
+                RetCode = ERetCodeSystem.Successfull,
+                Data = new BranchDetailResponse()
+            };
+
+            try
+            {
+                if (branchId == 0)
                 {
                     result.Data = null;
                     result.PartnerCode = _internalCode.BadRequest;
@@ -128,17 +191,17 @@ namespace CoffeeManagementSystem.API.Controllers
                     return result;
                 }
 
-                var positionDetail = _positionServices.DetailPositionById(positionId);
+                var branchDetail = _branchServices.DetailBranchById(branchId);
 
-                if (positionDetail != null)
+                if (branchDetail != null)
                 {
-                    result.Data = positionDetail;
+                    result.Data = branchDetail;
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
-                        InternalMessage = _internalMessenger.GetPositionByIdSuccess,
+                        InternalMessage = _internalMessenger.GetBranchByIdSuccess,
                         HttpCode = ERepositoryStatus.Success,
-                        SystemMessage = _internalMessenger.GetPositionByIdSuccess
+                        SystemMessage = _internalMessenger.GetBranchByIdSuccess
                     };
                 }
                 else
@@ -148,9 +211,9 @@ namespace CoffeeManagementSystem.API.Controllers
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
-                        InternalMessage = _internalMessenger.GetPositionByIdError,
+                        InternalMessage = _internalMessenger.GetBranchByIdError,
                         HttpCode = ERepositoryStatus.Error,
-                        SystemMessage = _internalMessenger.GetPositionByIdError
+                        SystemMessage = _internalMessenger.GetBranchByIdError
                     };
                 }
             }
@@ -170,25 +233,26 @@ namespace CoffeeManagementSystem.API.Controllers
         }
         #endregion
 
-        #region Create Position DONE TEST
+        #region Create Branch DONE TEST
         [HttpPost]
-        public RepositoryModel<PositionModel> CreatePosition([FromBody] PositionModel positionModel)
+        public RepositoryModel<BranchModel> CreatePosition([FromBody] BranchModel branchModel)
         {
             var controllerName = ControllerContext.ActionDescriptor.ControllerName;
             var actionName = ControllerContext.ActionDescriptor.ActionName;
             var key = DateTime.Now.ToString(CoffeeManagementSystemConfig.DateTimeSqlFormat);
 
-            RepositoryModel<PositionModel> result = new RepositoryModel<PositionModel>()
+            RepositoryModel<BranchModel> result = new RepositoryModel<BranchModel>()
             {
                 PartnerCode = _internalCode.SuccessFull,
                 RetCode = ERetCodeSystem.Successfull,
-                Data = new PositionModel()
+                Data = new BranchModel()
             };
-            
+
             try
             {
-                if(positionModel == null)
+                if (branchModel == null)
                 {
+                    result.Data = null;
                     result.PartnerCode = _internalCode.BadRequest;
                     result.RetCode = ERetCodeSystem.BadRequest;
                     result.Messenger = new MessengerError()
@@ -200,22 +264,23 @@ namespace CoffeeManagementSystem.API.Controllers
                     };
                     return result;
                 }
-                if(positionModel.PositionName == null)
+                if (branchModel.BranchName == null)
                 {
+                    result.Data = null;
                     result.PartnerCode = _internalCode.BadRequest;
                     result.RetCode = ERetCodeSystem.BadRequest;
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
-                        InternalMessage = _internalMessenger.CreatePositionNameIdNull,
+                        InternalMessage = _internalMessenger.CreateBranchNameIdNull,
                         HttpCode = ERepositoryStatus.BadRequest,
-                        SystemMessage = _internalMessenger.CreatePositionNameIdNull
+                        SystemMessage = _internalMessenger.CreateBranchNameIdNull
                     };
                     return result;
                 }
-                positionModel.CreateBy = positionModel.UpdateBy = CookieViewModel.Id;
-                PositionModel resultCreate = _positionServices.CreatePosition(positionModel);
-                if(resultCreate.Id != 0)
+                branchModel.CreateBy = branchModel.UpdateBy = CookieViewModel.Id;
+                BranchModel resultCreate = _branchServices.CreateBranch(branchModel);
+                if (resultCreate.Id != 0)
                 {
                     result.Data = resultCreate;
                     result.Messenger = new MessengerError()
@@ -228,17 +293,18 @@ namespace CoffeeManagementSystem.API.Controllers
                 }
                 else
                 {
-                    result.PartnerCode = _internalCode.CreatePositionError;
+                    result.Data = null;
+                    result.PartnerCode = _internalCode.CreateBranchError;
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
-                        InternalMessage = _internalMessenger.CreatePositionError,
+                        InternalMessage = _internalMessenger.CreateBranchError,
                         HttpCode = ERepositoryStatus.Success,
-                        SystemMessage = _internalMessenger.CreatePositionError
+                        SystemMessage = _internalMessenger.CreateBranchError
                     };
-                }    
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 result.PartnerCode = _internalCode.SystemError;
                 result.RetCode = ERetCodeSystem.SystemError;
@@ -254,25 +320,26 @@ namespace CoffeeManagementSystem.API.Controllers
         }
         #endregion
 
-        #region Update Position DONE TEST
+        #region Update Branch DONE TEST
         [HttpPut]
-        public RepositoryModel<PositionModel> UpdatePosition([FromBody] PositionModel positionModel)
+        public RepositoryModel<BranchModel> UpdateBranch([FromBody] BranchModel branchModel)
         {
             var controllerName = ControllerContext.ActionDescriptor.ControllerName;
             var actionName = ControllerContext.ActionDescriptor.ActionName;
             var key = DateTime.Now.ToString(CoffeeManagementSystemConfig.DateTimeSqlFormat);
 
-            RepositoryModel<PositionModel> result = new RepositoryModel<PositionModel>()
+            RepositoryModel<BranchModel> result = new RepositoryModel<BranchModel>()
             {
                 PartnerCode = _internalCode.SuccessFull,
                 RetCode = ERetCodeSystem.Successfull,
-                Data = new PositionModel()
+                Data = new BranchModel()
             };
 
             try
             {
-                if (positionModel.Id == 0)
+                if (branchModel.Id == 0)
                 {
+                    result.Data = null;
                     result.PartnerCode = _internalCode.BadRequest;
                     result.RetCode = ERetCodeSystem.BadRequest;
                     result.Messenger = new MessengerError()
@@ -284,28 +351,29 @@ namespace CoffeeManagementSystem.API.Controllers
                     };
                     return result;
                 }
-                positionModel.UpdateBy = CookieViewModel.Id;
-                PositionModel resultUpdate = _positionServices.UpdatePosition(positionModel);
+                branchModel.UpdateBy = CookieViewModel.Id;
+                BranchModel resultUpdate = _branchServices.UpdateBranch(branchModel);
                 if (resultUpdate.Id != 0)
                 {
                     result.Data = resultUpdate;
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
-                        InternalMessage = _internalMessenger.UpdatePositionSuccess,
+                        InternalMessage = _internalMessenger.UpdateBranchSuccess,
                         HttpCode = ERepositoryStatus.Success,
-                        SystemMessage = _internalMessenger.UpdatePositionSuccess
+                        SystemMessage = _internalMessenger.UpdateBranchSuccess
                     };
                 }
                 else
                 {
-                    result.PartnerCode = _internalCode.UpdatePositionError;
+                    result.Data = null;
+                    result.PartnerCode = _internalCode.UpdateBranchError;
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
-                        InternalMessage = _internalMessenger.UpdatePositionError,
+                        InternalMessage = _internalMessenger.UpdateBranchError,
                         HttpCode = ERepositoryStatus.Success,
-                        SystemMessage = _internalMessenger.UpdatePositionError
+                        SystemMessage = _internalMessenger.UpdateBranchError
                     };
                 }
             }
@@ -327,7 +395,7 @@ namespace CoffeeManagementSystem.API.Controllers
 
         #region Delete Position DONE TEST
         [HttpDelete]
-        public RepositoryModel<bool> DeletePosition(int positionId)
+        public RepositoryModel<bool> DeletePosition(int branchId)
         {
             var controllerName = ControllerContext.ActionDescriptor.ControllerName;
             var actionName = ControllerContext.ActionDescriptor.ActionName;
@@ -342,7 +410,7 @@ namespace CoffeeManagementSystem.API.Controllers
 
             try
             {
-                if (positionId == 0)
+                if (branchId == 0)
                 {
                     result.Data = false;
                     result.PartnerCode = _internalCode.BadRequest;
@@ -356,16 +424,16 @@ namespace CoffeeManagementSystem.API.Controllers
                     };
                     return result;
                 }
-
-                bool resultDelete = _positionServices.DeletePosition(positionId);
-                if (resultDelete == true)
+                var resultObject = _branchServices.GetObject<BranchEntities>(br => br.Id == branchId);
+                if (resultObject != null)
                 {
+                    result.Data = _branchServices.DeleteBranch(branchId);
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
-                        InternalMessage = _internalMessenger.DeletePositionSucces,
+                        InternalMessage = _internalMessenger.DeleteBranchSucces,
                         HttpCode = ERepositoryStatus.Success,
-                        SystemMessage = _internalMessenger.DeletePositionSucces
+                        SystemMessage = _internalMessenger.DeleteBranchSucces
                     };
                 }
                 else
@@ -375,9 +443,9 @@ namespace CoffeeManagementSystem.API.Controllers
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
-                        InternalMessage = _internalMessenger.DeletePositionError,
+                        InternalMessage = _internalMessenger.DeleteBranchError,
                         HttpCode = ERepositoryStatus.Error,
-                        SystemMessage = _internalMessenger.DeletePositionError
+                        SystemMessage = _internalMessenger.DeleteBranchError
                     };
                 }
             }
