@@ -31,16 +31,26 @@ namespace CoffeeManagementSystem.Services.SlideServices
         #endregion
 
         #region GetListSlides
-        public List<SlideModel> GetListSlides()
+        public List<SlideModel> GetListSlides(int pageSize, int pageNumber)
         {
-            return _mapper.Map<List<SlideModel>>(GetList<SlideEntities>());
+            List<SlideModel> slideModels =  _mapper.Map<List<SlideModel>>(GetList<SlideEntities>());
+            if(pageNumber != 0)
+            {
+                slideModels = slideModels.Skip(pageSize * (pageNumber - 1)).Take(pageSize).ToList();
+            }
+            return slideModels;
         }
         #endregion
 
         #region GetListSlidesActive
-        public List<SlideModel> GetListSlidesActive()
+        public List<SlideModel> GetListSlidesActive(int pageSize, int pageNumber)
         {
-            return _mapper.Map<List<SlideModel>>(GetList<SlideEntities>(sl => sl.Status == Model.Enum.StatusSystem.Active));
+            List<SlideModel> slideModels= _mapper.Map<List<SlideModel>>(GetList<SlideEntities>(sl => sl.Status == Model.Enum.StatusSystem.Active));
+            if(pageNumber != 0 )
+            {
+                slideModels = slideModels.Skip(pageSize * (pageNumber - 1)).Take(pageSize).ToList();
+            }
+            return slideModels;
         }
         #endregion
 
@@ -89,15 +99,25 @@ namespace CoffeeManagementSystem.Services.SlideServices
         {
             if(imageSlideUpdate != null)
             {
+                _importFileServices.DeleteImageAsync(slideModel.PublicId, cloudName, apiKey, apiSerect);
                 var resultUpload = _importFileServices.AddPhotoCloudAsync(imageSlideUpdate, cloudName, apiKey, apiSerect);
-                slideModel
+                slideModel.PublicId = resultUpload.Result.PublicId;
+                slideModel.UrlSlideImage = resultUpload.Result.UrlImage;
             }
+            return _mapper.Map<SlideModel>(UpdateReturnModel<SlideEntities>(_mapper.Map<SlideEntities>(slideModel)));
         }
         #endregion
 
+        #region DeleteSlide
         public bool DeleteSlide(int slideId)
         {
-            throw new System.NotImplementedException();
+            SlideEntities slide = GetObject<SlideEntities>(sl => sl.Id == slideId);
+            if(slide.Id != 0 )
+            {
+                return DeleteObject<SlideEntities>(slide);
+            }
+            return false;
         }
+        #endregion
     }
 }

@@ -16,13 +16,13 @@ namespace CoffeeManagementSystem.Services.SlideServices
         /// Lấy danh sách slide.
         /// </summary>
         /// <returns></returns>
-        List<SlideModel> GetListSlides();
+        List<SlideModel> GetListSlides(int pageSize, int pageNumber);
 
         /// <summary>
         /// Lấy danh sách slide hoạt động.
         /// </summary>
         /// <returns></returns>
-        List<SlideModel> GetListSlidesActive();
+        List<SlideModel> GetListSlidesActive(int pageSize, int pageNumber);
 
         /// <summary>
         /// Lấy thông tin chi tiết của slide;
