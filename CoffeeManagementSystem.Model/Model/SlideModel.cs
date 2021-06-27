@@ -2,12 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using CoffeeManagementSystem.Model.BaseModel;
+
 namespace CoffeeManagementSystem.Model.Model
 {
     /// <summary>
     /// Model Slide.
     /// </summary>
-    public class SlideModel 
+    public class SlideModel : BaseTableWithId
     {
         /// <summary>
         /// Gets or sets slideName.

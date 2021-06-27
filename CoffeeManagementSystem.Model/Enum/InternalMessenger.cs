@@ -69,7 +69,7 @@ namespace CoffeeManagementSystem.Model.Enum
         #endregion
 
 
-        #region Message Of Position
+        #region Message Of Branch
         public string GetBranchNoExists = "Không có chi nhánh nào trong hệ thống.";
         public string GetBranchSuccess = "Lấy danh sách chi nhánh trong hệ thống.";
         public string CreateBranchNameIdNull = "Không được để tên chi nhánh trống.";
@@ -80,6 +80,19 @@ namespace CoffeeManagementSystem.Model.Enum
         public string DeleteBranchSucces = "Xóa chi nhánh thành công.";
         public string GetBranchByIdSuccess = "Lấy chi tiết chi nhánh thành công.";
         public string GetBranchByIdError = "Lấy chi tiết chi nhánh không thành công.";
+        #endregion
+
+        #region Message Of Slide
+        public string GetSlideNoExists = "Không có Slide nào trong hệ thống.";
+        public string GetSlideSuccess = "Lấy danh sách Slide trong hệ thống.";
+        public string CreateSlideNameIdNull = "Không được để tên Slide trống.";
+        public string CreateSlideError = "Thêm Slide mới không thành công.";
+        public string UpdateSlideError = "Sửa Slide không thành công.";
+        public string UpdateSlideSuccess = "Sửa Slide thành công.";
+        public string DeleteSlideError = "Xóa Slide không thành công.";
+        public string DeleteSlideSucces = "Xóa Slide thành công.";
+        public string GetSlideByIdSuccess = "Lấy chi tiết Slide thành công.";
+        public string GetSlideByIdError = "Lấy chi tiết Slide không thành công.";
         #endregion
 
         #region Message Of Account
