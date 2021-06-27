@@ -31,16 +31,26 @@ namespace CoffeeManagementSystem.Services.SlideServices
         #endregion
 
         #region GetListSlides
-        public List<SlideModel> GetListSlides()
+        public List<SlideModel> GetListSlides(int pageSize, int pageNumber)
         {
-            return _mapper.Map<List<SlideModel>>(GetList<SlideEntities>());
+            List<SlideModel> slideModels =  _mapper.Map<List<SlideModel>>(GetList<SlideEntities>());
+            if(pageNumber != 0)
+            {
+                slideModels = slideModels.Skip(pageSize * (pageNumber - 1)).Take(pageSize).ToList();
+            }
+            return slideModels;
         }
         #endregion
 
         #region GetListSlidesActive
-        public List<SlideModel> GetListSlidesActive()
+        public List<SlideModel> GetListSlidesActive(int pageSize, int pageNumber)
         {
-            return _mapper.Map<List<SlideModel>>(GetList<SlideEntities>(sl => sl.Status == Model.Enum.StatusSystem.Active));
+            List<SlideModel> slideModels= _mapper.Map<List<SlideModel>>(GetList<SlideEntities>(sl => sl.Status == Model.Enum.StatusSystem.Active));
+            if(pageNumber != 0 )
+            {
+                slideModels = slideModels.Skip(pageSize * (pageNumber - 1)).Take(pageSize).ToList();
+            }
+            return slideModels;
         }
         #endregion
 
