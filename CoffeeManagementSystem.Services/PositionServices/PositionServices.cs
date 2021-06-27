@@ -7,6 +7,7 @@ namespace CoffeeManagementSystem.Services.PositionServices
     using System.Collections.Generic;
     using System.Linq;
     using AutoMapper;
+    using CoffeeManagementSystem.Data.EntityContext;
     using CoffeeManagementSystem.Model.EntitiesModel;
     using CoffeeManagementSystem.Model.Model;
     using CoffeeManagementSystem.Model.Response;
@@ -19,6 +20,7 @@ namespace CoffeeManagementSystem.Services.PositionServices
         public PositionServices(IMapper mapper)
         {
             _mapper = mapper;
+            Context = new CoffeeManagementSystemContext();
         }
         #endregion
 
