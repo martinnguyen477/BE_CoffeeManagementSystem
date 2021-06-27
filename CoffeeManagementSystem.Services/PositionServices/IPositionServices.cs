@@ -6,13 +6,14 @@ namespace CoffeeManagementSystem.Services.PositionServices
 {
     using System.Collections.Generic;
     using CoffeeManagementSystem.Model.Model;
+    using CoffeeManagementSystem.Model.Response;
     using CoffeeManagementSystem.Services.BaseServices;
 
     public interface IPositionServices : IBaseServices
     {
-        List<PositionModel> GetListAllPosition();
+        List<PositionModel> GetListAllPosition(int pageSize, int pageNumber);
 
-        PositionModel DetailPositionById(int positionId);
+        PositionDetailRespone DetailPositionById(int positionId);
 
         PositionModel CreatePosition(PositionModel posititonModel);
 
