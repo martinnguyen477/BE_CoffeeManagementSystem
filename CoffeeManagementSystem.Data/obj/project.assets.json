@@ -7310,11 +7310,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem.Data\\CoffeeManagementSystem.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Data\\CoffeeManagementSystem.Data.csproj",
       "projectName": "CoffeeManagementSystem.Data",
-      "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem.Data\\CoffeeManagementSystem.Data.csproj",
+      "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Data\\CoffeeManagementSystem.Data.csproj",
       "packagesPath": "C:\\Users\\Nguyen Quoc Cuong\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem.Data\\obj\\",
+      "outputPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nguyen Quoc Cuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7331,8 +7331,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj": {
-              "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj"
+            "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj": {
+              "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj"
             }
           }
         }
