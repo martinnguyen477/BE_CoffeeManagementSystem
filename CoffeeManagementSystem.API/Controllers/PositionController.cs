@@ -34,7 +34,7 @@ namespace CoffeeManagementSystem.API.Controllers
         }
         #endregion
 
-        #region Get List Positions 
+        #region Get List Positions DONE TEST
         [HttpGet]
         public RepositoryModel<List<PositionModel>> GetListPositions(int pageSize, int pageNumber)
         {
@@ -94,7 +94,7 @@ namespace CoffeeManagementSystem.API.Controllers
         }
         #endregion
 
-        #region Get List Positions 
+        #region Get Positions Detail DONE TEST
         [HttpGet]
         public RepositoryModel<PositionDetailRespone> GetPositionDetail(int positionId)
         {
@@ -115,6 +115,7 @@ namespace CoffeeManagementSystem.API.Controllers
             {
                 if (positionId == 0)
                 {
+                    result.Data = null;
                     result.PartnerCode = _internalCode.BadRequest;
                     result.RetCode = ERetCodeSystem.BadRequest;
                     result.Messenger = new MessengerError()
@@ -142,6 +143,7 @@ namespace CoffeeManagementSystem.API.Controllers
                 }
                 else
                 {
+                    result.Data = null;
                     result.PartnerCode = _internalCode.GetDataError;
                     result.Messenger = new MessengerError()
                     {
@@ -168,9 +170,9 @@ namespace CoffeeManagementSystem.API.Controllers
         }
         #endregion
 
-        #region Create Position
+        #region Create Position DONE TEST
         [HttpPost]
-        public RepositoryModel<PositionModel> CreatePosition(PositionModel positionModel)
+        public RepositoryModel<PositionModel> CreatePosition([FromBody] PositionModel positionModel)
         {
             var controllerName = ControllerContext.ActionDescriptor.ControllerName;
             var actionName = ControllerContext.ActionDescriptor.ActionName;
@@ -252,9 +254,9 @@ namespace CoffeeManagementSystem.API.Controllers
         }
         #endregion
 
-        #region Update Position
+        #region Update Position DONE TEST
         [HttpPut]
-        public RepositoryModel<PositionModel> UpdatePosition(PositionModel positionModel)
+        public RepositoryModel<PositionModel> UpdatePosition([FromBody] PositionModel positionModel)
         {
             var controllerName = ControllerContext.ActionDescriptor.ControllerName;
             var actionName = ControllerContext.ActionDescriptor.ActionName;
@@ -290,9 +292,9 @@ namespace CoffeeManagementSystem.API.Controllers
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
-                        InternalMessage = _internalMessenger.SuccessFull,
+                        InternalMessage = _internalMessenger.UpdatePositionSuccess,
                         HttpCode = ERepositoryStatus.Success,
-                        SystemMessage = _internalMessenger.SuccessFull
+                        SystemMessage = _internalMessenger.UpdatePositionSuccess
                     };
                 }
                 else
@@ -321,9 +323,9 @@ namespace CoffeeManagementSystem.API.Controllers
             }
             return result;
         }
-        #endregion
+        #endregion 
 
-        #region Delete Position
+        #region Delete Position DONE TEST
         [HttpDelete]
         public RepositoryModel<bool> DeletePosition(int positionId)
         {
@@ -342,6 +344,7 @@ namespace CoffeeManagementSystem.API.Controllers
             {
                 if (positionId == 0)
                 {
+                    result.Data = false;
                     result.PartnerCode = _internalCode.BadRequest;
                     result.RetCode = ERetCodeSystem.BadRequest;
                     result.Messenger = new MessengerError()
@@ -360,9 +363,9 @@ namespace CoffeeManagementSystem.API.Controllers
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
-                        InternalMessage = _internalMessenger.DeleteCategorySuccess,
+                        InternalMessage = _internalMessenger.DeletePositionSucces,
                         HttpCode = ERepositoryStatus.Success,
-                        SystemMessage = _internalMessenger.DeleteCategorySuccess
+                        SystemMessage = _internalMessenger.DeletePositionSucces
                     };
                 }
                 else
@@ -372,9 +375,9 @@ namespace CoffeeManagementSystem.API.Controllers
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
-                        InternalMessage = _internalMessenger.DeleteCategoryError,
+                        InternalMessage = _internalMessenger.DeletePositionError,
                         HttpCode = ERepositoryStatus.Error,
-                        SystemMessage = _internalMessenger.DeleteCategoryError
+                        SystemMessage = _internalMessenger.DeletePositionError
                     };
                 }
             }

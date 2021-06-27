@@ -46,7 +46,7 @@ namespace CoffeeManagementSystem.Model.Enum
         #region Message Of Category
         public string CreateCategoryError = "Tạo loại không thành công.";
         public string CreateCategoryNameIsNull = "Không được để trống tên loại.";
-        public string UpdateCategoryError = "Tạo loại không thành công.";
+        public string UpdateCategoryError = "Sửa loại không thành công.";
         public string DeleteCategorySuccess = "Xóa Category thành công.";
         public string DeleteCategoryError = "Không tìm thấy Category này.";
         public string GetCategoryNoExists = "Không có Category nào trong hệ thống.";
@@ -61,6 +61,7 @@ namespace CoffeeManagementSystem.Model.Enum
         public string CreatePositionNameIdNull = "Không được để tên vị trí trống.";
         public string CreatePositionError = "Thêm vị mới không thành công.";
         public string UpdatePositionError = "Sửa vị trí không thành công.";
+        public string UpdatePositionSuccess = "Sửa vị trí thành công.";
         public string DeletePositionError = "Xóa vị trí không thành công.";
         public string DeletePositionSucces = "Xóa vị trí thành công.";
         public string GetPositionByIdSuccess = "Lấy chi tiết vị trí thành công.";
