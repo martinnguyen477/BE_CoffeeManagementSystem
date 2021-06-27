@@ -39,7 +39,7 @@ namespace CoffeeManagementSystem.Services.BranchServices
             BranchEntities branchEntities = GetObject<BranchEntities>(br => br.Id == branchId);
             if(branchEntities.Id != 0 )
             {
-                return DeleteObject<BranchEntities>(branchEntities);
+                return Delete<BranchEntities>(branchEntities.Id);
             }
             return false;
         }
@@ -77,7 +77,7 @@ namespace CoffeeManagementSystem.Services.BranchServices
             List<BranchModel> branchModels = _mapper.Map<List<BranchModel>>(GetList<BranchEntities>());
             if(pageSize != 0)
             {
-                branchModels = branchModels.Skip(pageSize * (pageNumber - 1)).Skip(pageSize).ToList();
+                branchModels = branchModels.Skip(pageSize * (pageNumber - 1)).Take(pageSize).ToList();
             }
             return branchModels;
         }

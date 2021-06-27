@@ -66,7 +66,20 @@ namespace CoffeeManagementSystem.Model.Enum
         public string DeletePositionSucces = "Xóa vị trí thành công.";
         public string GetPositionByIdSuccess = "Lấy chi tiết vị trí thành công.";
         public string GetPositionByIdError = "Lấy chi tiết vị trí không thành công.";
+        #endregion
 
+
+        #region Message Of Position
+        public string GetBranchNoExists = "Không có chi nhánh nào trong hệ thống.";
+        public string GetBranchSuccess = "Lấy danh sách chi nhánh trong hệ thống.";
+        public string CreateBranchNameIdNull = "Không được để tên chi nhánh trống.";
+        public string CreateBranchError = "Thêm chi nhánh mới không thành công.";
+        public string UpdateBranchError = "Sửa chi nhánh không thành công.";
+        public string UpdateBranchSuccess = "Sửa chi nhánh thành công.";
+        public string DeleteBranchError = "Xóa chi nhánh không thành công.";
+        public string DeleteBranchSucces = "Xóa chi nhánh thành công.";
+        public string GetBranchByIdSuccess = "Lấy chi tiết chi nhánh thành công.";
+        public string GetBranchByIdError = "Lấy chi tiết chi nhánh không thành công.";
         #endregion
 
         #region Message Of Account
