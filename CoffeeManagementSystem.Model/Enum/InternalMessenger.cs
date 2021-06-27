@@ -55,6 +55,11 @@ namespace CoffeeManagementSystem.Model.Enum
         public string GetCategoryByIdError = "Lấy Category chi tiết không thành công.";
         #endregion
 
+        #region Message Of Position
+        public string GetPositionNoExists = "Không có Position nào trong hệ thống.";
+        public string GetPositionSuccess = "Lấy danh sách Position nào trong hệ thống.";
+        #endregion
+
         #region Message Of Account
         public string InsertRoleForGroupUserUnSuccess = "Thêm quyền cho nhóm người dùng không thành công";
         public string InsertRoleForGroupUserSuccess = "Thêm quyền cho nhóm người dùng thành công";

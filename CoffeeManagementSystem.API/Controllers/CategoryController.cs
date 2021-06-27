@@ -42,7 +42,6 @@ namespace CoffeeManagementSystem.API.Controllers
             //Lấy tên Controller, Action, Key
             var controllerName = ControllerContext.ActionDescriptor.ControllerName;
             var actionName = ControllerContext.ActionDescriptor.ActionName;
-
             var key = DateTime.Now.ToString(CoffeeManagementSystemConfig.DateExpSqlFormat);
 
             //Khở tạo model này là success. Và create data = null.
@@ -63,20 +62,20 @@ namespace CoffeeManagementSystem.API.Controllers
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
-                        InternalMessage = _internalMessenger.GetCategorySuccess,
+                        InternalMessage = _internalMessenger.GetPositionSuccess,
                         HttpCode = ERepositoryStatus.Success,
-                        SystemMessage = _internalMessenger.GetCategorySuccess
+                        SystemMessage = _internalMessenger.GetPositionSuccess
                     };
                 }
                 else
                 {
-                    result.PartnerCode = _internalCode.CreateStudentError;
+                    result.PartnerCode = _internalCode.GetDataError;
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
-                        InternalMessage = _internalMessenger.GetCategoryNoExists,
+                        InternalMessage = _internalMessenger.GetPositionNoExists,
                         HttpCode = ERepositoryStatus.Error,
-                        SystemMessage = _internalMessenger.GetCategoryNoExists
+                        SystemMessage = _internalMessenger.GetPositionNoExists
                     };
                 }
             }
