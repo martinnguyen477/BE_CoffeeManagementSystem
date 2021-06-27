@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9wIk4n69xeS2kmeyGHEoFncbqWyrnBJTXNy0HGcaZMZtsCpElsa4f+hlLuSwqy9KHy2iJeFAezyfASyAwDbMEg==",
+  "dgSpecHash": "cAFFs5B/H7d1QwC25Dcr4vRXrDqrfwLD23Rzv8Uxlq2S8FrDUudzyt2UKh/pFc7znyR/yY4kXZKQGRoTRNtmdQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem.Services\\CoffeeManagementSystem.Services.csproj",
+  "projectFilePath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Services\\CoffeeManagementSystem.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nguyen Quoc Cuong\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Nguyen Quoc Cuong\\.nuget\\packages\\cloudinarydotnet\\1.15.2\\cloudinarydotnet.1.15.2.nupkg.sha512",

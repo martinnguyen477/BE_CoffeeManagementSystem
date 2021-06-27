@@ -5004,11 +5004,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj",
+      "projectUniqueName": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj",
       "projectName": "CoffeeManagementSystem.Model",
-      "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj",
+      "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj",
       "packagesPath": "C:\\Users\\Nguyen Quoc Cuong\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\CoffeeManagementSystem.Model\\obj\\",
+      "outputPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nguyen Quoc Cuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
