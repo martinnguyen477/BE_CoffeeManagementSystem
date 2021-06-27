@@ -33,7 +33,7 @@ namespace CoffeeManagementSystem.API.Controllers
         #endregion
 
         [HttpGet]
-        public RepositoryModel<List<PositionModel>> GetListPosition()
+        public RepositoryModel<List<PositionModel>> GetListPosition([FromForm] int pageSize, int pageNumber)
         {
             //Lấy tên Controller, Action, Key
             var controllerName = ControllerContext.ActionDescriptor.ControllerName;
@@ -50,7 +50,7 @@ namespace CoffeeManagementSystem.API.Controllers
 
             try
             {
-                var listPosition = _positionServices.GetListAllPosition();
+                var listPosition = _positionServices.GetListAllPosition(pageSize, pageNumber);
 
                 if (listPosition.Count > 0)
                 {
