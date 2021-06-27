@@ -4,10 +4,12 @@
 
 namespace CoffeeManagementSystem.Model.Model
 {
+    using CoffeeManagementSystem.Model.BaseModel;
+
     /// <summary>
     /// Thực thể Vị trí.
     /// </summary>
-    public class PositionModel
+    public class PositionModel : BaseTableWithId
     {
         /// <summary>
         /// Gets or sets tên vị trí.
