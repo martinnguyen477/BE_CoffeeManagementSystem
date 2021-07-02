@@ -4,14 +4,16 @@ using CoffeeManagementSystem.Data.EntityContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CoffeeManagementSystem.Data.Migrations
 {
     [DbContext(typeof(CoffeeManagementSystemContext))]
-    partial class CoffeeManagementSystemContextModelSnapshot : ModelSnapshot
+    [Migration("20210702175005_UpdateDataUpload")]
+    partial class UpdateDataUpload
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

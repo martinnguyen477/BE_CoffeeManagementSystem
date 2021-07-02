@@ -61,7 +61,7 @@ namespace CoffeeManagementSystem.Services.ImportFileServices
                 var uploadParams = new ImageUploadParams
                 {
                     File = new FileDescription(formFile.FileName, streams),
-                    Transformation = new Transformation().Height(1000).Width(1000).Crop("fill").Gravity("face"),
+                    Transformation = new Transformation().Height(1280).Width(1920).Crop("fill").Gravity("face"),
                     //test thử
                     //PublicId = "myfolder/mysubfolder/Category"
                 };

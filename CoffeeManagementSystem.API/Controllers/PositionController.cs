@@ -8,6 +8,7 @@ namespace CoffeeManagementSystem.API.Controllers
     using CoffeeManagementSystem.API.Functions;
     using CoffeeManagementSystem.Model.BaseModel;
     using CoffeeManagementSystem.Model.Common;
+    using CoffeeManagementSystem.Model.EntitiesModel;
     using CoffeeManagementSystem.Model.Enum;
     using CoffeeManagementSystem.Model.Model;
     using CoffeeManagementSystem.Model.Request;
@@ -189,6 +190,7 @@ namespace CoffeeManagementSystem.API.Controllers
             {
                 if(positionModel == null)
                 {
+                    result.Data = null;
                     result.PartnerCode = _internalCode.BadRequest;
                     result.RetCode = ERetCodeSystem.BadRequest;
                     result.Messenger = new MessengerError()
@@ -200,8 +202,9 @@ namespace CoffeeManagementSystem.API.Controllers
                     };
                     return result;
                 }
-                if(positionModel.PositionName == null)
+                if(positionModel.PositionName == null || positionModel.PositionName == "")
                 {
+                    result.Data = null;
                     result.PartnerCode = _internalCode.BadRequest;
                     result.RetCode = ERetCodeSystem.BadRequest;
                     result.Messenger = new MessengerError()
@@ -273,6 +276,7 @@ namespace CoffeeManagementSystem.API.Controllers
             {
                 if (positionModel.Id == 0)
                 {
+                    result.Data = null;
                     result.PartnerCode = _internalCode.BadRequest;
                     result.RetCode = ERetCodeSystem.BadRequest;
                     result.Messenger = new MessengerError()
@@ -284,11 +288,12 @@ namespace CoffeeManagementSystem.API.Controllers
                     };
                     return result;
                 }
-                positionModel.UpdateBy = CookieViewModel.Id;
-                PositionModel resultUpdate = _positionServices.UpdatePosition(positionModel);
-                if (resultUpdate.Id != 0)
+                var resultPosition = _positionServices.GetObject<PositionEntities>(po => po.Id == positionModel.Id);
+               
+                if (resultPosition != null)
                 {
-                    result.Data = resultUpdate;
+                    positionModel.UpdateBy = CookieViewModel.Id;
+                    result.Data  = _positionServices.UpdatePosition(positionModel);
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
@@ -299,6 +304,7 @@ namespace CoffeeManagementSystem.API.Controllers
                 }
                 else
                 {
+                    result.Data = null;
                     result.PartnerCode = _internalCode.UpdatePositionError;
                     result.Messenger = new MessengerError()
                     {

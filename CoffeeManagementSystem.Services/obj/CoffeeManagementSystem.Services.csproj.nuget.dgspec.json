@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Services\\CoffeeManagementSystem.Services.csproj": {}
+    "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Services\\CoffeeManagementSystem.Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Data\\CoffeeManagementSystem.Data.csproj": {
+    "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Data\\CoffeeManagementSystem.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Data\\CoffeeManagementSystem.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Data\\CoffeeManagementSystem.Data.csproj",
         "projectName": "CoffeeManagementSystem.Data",
-        "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Data\\CoffeeManagementSystem.Data.csproj",
+        "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Data\\CoffeeManagementSystem.Data.csproj",
         "packagesPath": "C:\\Users\\Nguyen Quoc Cuong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Data\\obj\\",
+        "outputPath": "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nguyen Quoc Cuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj": {
-                "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj"
+              "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj": {
+                "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj"
               }
             }
           }
@@ -84,14 +84,14 @@
         }
       }
     },
-    "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj": {
+    "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj",
+        "projectUniqueName": "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj",
         "projectName": "CoffeeManagementSystem.Model",
-        "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj",
+        "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj",
         "packagesPath": "C:\\Users\\Nguyen Quoc Cuong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\obj\\",
+        "outputPath": "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nguyen Quoc Cuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -158,14 +158,14 @@
         }
       }
     },
-    "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Services\\CoffeeManagementSystem.Services.csproj": {
+    "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Services\\CoffeeManagementSystem.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Services\\CoffeeManagementSystem.Services.csproj",
+        "projectUniqueName": "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Services\\CoffeeManagementSystem.Services.csproj",
         "projectName": "CoffeeManagementSystem.Services",
-        "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Services\\CoffeeManagementSystem.Services.csproj",
+        "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Services\\CoffeeManagementSystem.Services.csproj",
         "packagesPath": "C:\\Users\\Nguyen Quoc Cuong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Services\\obj\\",
+        "outputPath": "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nguyen Quoc Cuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -182,11 +182,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Data\\CoffeeManagementSystem.Data.csproj": {
-                "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Data\\CoffeeManagementSystem.Data.csproj"
+              "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Data\\CoffeeManagementSystem.Data.csproj": {
+                "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Data\\CoffeeManagementSystem.Data.csproj"
               },
-              "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj": {
-                "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj"
+              "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj": {
+                "projectPath": "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.Model\\CoffeeManagementSystem.Model.csproj"
               }
             }
           }

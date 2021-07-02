@@ -38,7 +38,7 @@ namespace CoffeeManagementSystem.API.Controllers
 
         #region Get List Slide
         [HttpGet]
-        public RepositoryModel<List<SlideModel>> GetListSlides(int pageSize, int pageNumber)
+        public RepositoryModel<List<SlideModel>> GetListSlides()
         {
             //Lấy tên Controller, Action, Key
             var controllerName = ControllerContext.ActionDescriptor.ControllerName;
@@ -55,7 +55,67 @@ namespace CoffeeManagementSystem.API.Controllers
 
             try
             {
-                var listSlide = _slideServices.GetListSlides(pageSize, pageNumber);
+                var listSlide = _slideServices.GetListSlides();
+
+                if (listSlide.Count > 0)
+                {
+                    result.Data = listSlide;
+                    result.Messenger = new MessengerError()
+                    {
+                        TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
+                        InternalMessage = _internalMessenger.GetSlideSuccess,
+                        HttpCode = ERepositoryStatus.Success,
+                        SystemMessage = _internalMessenger.GetSlideSuccess
+                    };
+                }
+                else
+                {
+                    result.PartnerCode = _internalCode.GetDataError;
+                    result.Messenger = new MessengerError()
+                    {
+                        TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
+                        InternalMessage = _internalMessenger.GetSlideNoExists,
+                        HttpCode = ERepositoryStatus.Error,
+                        SystemMessage = _internalMessenger.GetSlideNoExists
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                result.RetCode = ERetCodeSystem.SystemError;
+                result.PartnerCode = _internalCode.SystemError;
+                result.Messenger = new MessengerError()
+                {
+                    TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
+                    InternalMessage = ex.Message,
+                    HttpCode = ERepositoryStatus.InternalError,
+                    SystemMessage = ex.ToString()
+                };
+            }
+            return result;
+        }
+        #endregion
+
+        #region Get List Slides Paging
+        [HttpGet]
+        public RepositoryModel<List<SlideModel>> GetListSlidesPaging(int pageSize, int pageNumber)
+        {
+            //Lấy tên Controller, Action, Key
+            var controllerName = ControllerContext.ActionDescriptor.ControllerName;
+            var actionName = ControllerContext.ActionDescriptor.ActionName;
+            var key = DateTime.Now.ToString(CoffeeManagementSystemConfig.DateExpSqlFormat);
+
+            //Khở tạo model này là success. Và create data = null.
+            RepositoryModel<List<SlideModel>> result = new RepositoryModel<List<SlideModel>>()
+            {
+                PartnerCode = _internalCode.SuccessFull,
+                RetCode = ERetCodeSystem.Successfull,
+                Data = new List<SlideModel>()
+            };
+
+            try
+            {
+                var listSlide = _slideServices.GetListSlidesPaging(pageSize, pageNumber);
 
                 if (listSlide.Count > 0)
                 {
@@ -234,7 +294,7 @@ namespace CoffeeManagementSystem.API.Controllers
 
         #region Create Slide
         [HttpPost]
-        public RepositoryModel<SlideModel> CreateSlide([FromBody] SlideModel slideModel, [FromForm] FormFile formFile)
+        public RepositoryModel<SlideModel> CreateSlide([FromForm] SlideModel slideModel, IFormFile formFile)
         {
             var controllerName = ControllerContext.ActionDescriptor.ControllerName;
             var actionName = ControllerContext.ActionDescriptor.ActionName;
@@ -277,7 +337,7 @@ namespace CoffeeManagementSystem.API.Controllers
                     };
                     return result;
                 }
-                slideModel.CreateBy = slideModel.UpdateBy = slideModel.Id;
+                slideModel.CreateBy = slideModel.UpdateBy = CookieViewModel.Id;
                 SlideModel resultCreate = _slideServices.CreateSlide(slideModel, formFile, CoffeeManagementSystemConfig.CloudName, CoffeeManagementSystemConfig.APIKey, CoffeeManagementSystemConfig.APISecret);
                 if (resultCreate.Id != 0)
                 {
@@ -321,7 +381,7 @@ namespace CoffeeManagementSystem.API.Controllers
 
         #region Update Slide
         [HttpPut]
-        public RepositoryModel<SlideModel> UpdateSlide([FromBody] SlideModel slideModel, [FromForm] FormFile formFile)
+        public RepositoryModel<SlideModel> UpdateSlide([FromForm] SlideModel slideModel, IFormFile formFile)
         {
             var controllerName = ControllerContext.ActionDescriptor.ControllerName;
             var actionName = ControllerContext.ActionDescriptor.ActionName;
@@ -350,11 +410,13 @@ namespace CoffeeManagementSystem.API.Controllers
                     };
                     return result;
                 }
-                slideModel.UpdateBy = CookieViewModel.Id;
-                SlideModel resultUpdate = _slideServices.UpdateSlide(slideModel, formFile, CoffeeManagementSystemConfig.CloudName, CoffeeManagementSystemConfig.APIKey, CoffeeManagementSystemConfig.APISecret);
-                if (resultUpdate.Id != 0)
+
+                var resultObject = _slideServices.GetObject<SlideEntities>(sl => sl.Id == slideModel.Id);
+               
+                if (resultObject != null)
                 {
-                    result.Data = resultUpdate;
+                    slideModel.UpdateBy = CookieViewModel.Id;
+                    result.Data = _slideServices.UpdateSlide(slideModel, formFile, CoffeeManagementSystemConfig.CloudName, CoffeeManagementSystemConfig.APIKey, CoffeeManagementSystemConfig.APISecret);
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
@@ -378,6 +440,7 @@ namespace CoffeeManagementSystem.API.Controllers
             }
             catch (Exception ex)
             {
+                result.Data = null;
                 result.PartnerCode = _internalCode.SystemError;
                 result.RetCode = ERetCodeSystem.SystemError;
                 result.Messenger = new MessengerError()
@@ -430,9 +493,9 @@ namespace CoffeeManagementSystem.API.Controllers
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
-                        InternalMessage = _internalMessenger.DeleteSlideSucces,
+                        InternalMessage = _internalMessenger.DeleteSlideSuccess,
                         HttpCode = ERepositoryStatus.Success,
-                        SystemMessage = _internalMessenger.DeleteSlideSucces
+                        SystemMessage = _internalMessenger.DeleteSlideSuccess
                     };
                 }
                 else

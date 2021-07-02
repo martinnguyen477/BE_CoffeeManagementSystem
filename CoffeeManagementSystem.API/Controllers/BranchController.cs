@@ -349,11 +349,12 @@ namespace CoffeeManagementSystem.API.Controllers
                     };
                     return result;
                 }
-                branchModel.UpdateBy = CookieViewModel.Id;
-                BranchModel resultUpdate = _branchServices.UpdateBranch(branchModel);
-                if (resultUpdate.Id != 0)
+                var resultObject = _branchServices.GetObject<BranchEntities>(br => br.Id == branchModel.Id);
+                
+                if (resultObject != null)
                 {
-                    result.Data = resultUpdate;
+                    branchModel.UpdateBy = CookieViewModel.Id;
+                    result.Data = _branchServices.UpdateBranch(branchModel);
                     result.Messenger = new MessengerError()
                     {
                         TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
