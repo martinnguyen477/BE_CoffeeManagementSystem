@@ -104,6 +104,7 @@ namespace CoffeeManagementSystem.API.Controllers
                         {
                             Token = tokenValue,
                             UserName = resultLogin.UserName,
+                            Email = resultLogin.Email
                         };
 
                         result.Data = loginViewReturn;

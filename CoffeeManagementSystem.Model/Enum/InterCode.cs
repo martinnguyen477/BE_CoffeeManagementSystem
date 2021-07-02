@@ -180,6 +180,16 @@ namespace CoffeeManagementSystem.Model.Enum
         /// </summary>
         public string UpdateBranchError = "CoffeeManagementSystem_034";
 
+        /// <summary>
+        /// Gets or sets CreateBranchError.
+        /// </summary>
+        public string CreateSlideError = "CoffeeManagementSystem_035";
+
+        /// <summary>
+        /// UpdateBranchError.
+        /// </summary>
+        public string UpdateSlideError = "CoffeeManagementSystem_036";
+
     }
 
 }

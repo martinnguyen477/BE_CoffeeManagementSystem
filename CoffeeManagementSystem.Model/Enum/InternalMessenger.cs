@@ -46,7 +46,7 @@ namespace CoffeeManagementSystem.Model.Enum
         #region Message Of Category
         public string CreateCategoryError = "Tạo loại không thành công.";
         public string CreateCategoryNameIsNull = "Không được để trống tên loại.";
-        public string UpdateCategoryError = "Sửa loại không thành công.";
+        public string UpdateCategoryError = "Không tìm thấy loại này.";
         public string DeleteCategorySuccess = "Xóa Category thành công.";
         public string DeleteCategoryError = "Không tìm thấy Category này.";
         public string GetCategoryNoExists = "Không có Category nào trong hệ thống.";
@@ -60,7 +60,7 @@ namespace CoffeeManagementSystem.Model.Enum
         public string GetPositionSuccess = "Lấy danh sách vị trí nào trong hệ thống.";
         public string CreatePositionNameIdNull = "Không được để tên vị trí trống.";
         public string CreatePositionError = "Thêm vị mới không thành công.";
-        public string UpdatePositionError = "Sửa vị trí không thành công.";
+        public string UpdatePositionError = "Không tìm thấy vị trí này.";
         public string UpdatePositionSuccess = "Sửa vị trí thành công.";
         public string DeletePositionError = "Xóa vị trí không thành công.";
         public string DeletePositionSucces = "Xóa vị trí thành công.";
@@ -69,17 +69,30 @@ namespace CoffeeManagementSystem.Model.Enum
         #endregion
 
 
-        #region Message Of Position
+        #region Message Of Branch
         public string GetBranchNoExists = "Không có chi nhánh nào trong hệ thống.";
         public string GetBranchSuccess = "Lấy danh sách chi nhánh trong hệ thống.";
         public string CreateBranchNameIdNull = "Không được để tên chi nhánh trống.";
         public string CreateBranchError = "Thêm chi nhánh mới không thành công.";
         public string UpdateBranchError = "Sửa chi nhánh không thành công.";
         public string UpdateBranchSuccess = "Sửa chi nhánh thành công.";
-        public string DeleteBranchError = "Xóa chi nhánh không thành công.";
+        public string DeleteBranchError = "Không tìm thấy chi nhánh này.";
         public string DeleteBranchSucces = "Xóa chi nhánh thành công.";
         public string GetBranchByIdSuccess = "Lấy chi tiết chi nhánh thành công.";
-        public string GetBranchByIdError = "Lấy chi tiết chi nhánh không thành công.";
+        public string GetBranchByIdError = "Không tìm thấy chi nhánh này.";
+        #endregion
+
+        #region Message Of Slide
+        public string GetSlideNoExists = "Không có Slide nào trong hệ thống.";
+        public string GetSlideSuccess = "Lấy danh sách Slide trong hệ thống.";
+        public string CreateSlideNameIdNull = "Không được để tên Slide trống.";
+        public string CreateSlideError = "Không tìm thấy Slide này.";
+        public string UpdateSlideError = "Sửa Slide không thành công.";
+        public string UpdateSlideSuccess = "Sửa Slide thành công.";
+        public string DeleteSlideError = "Không tìm thấy Slide này.";
+        public string DeleteSlideSuccess = "Xóa Slide thành công.";
+        public string GetSlideByIdSuccess = "Lấy chi tiết Slide thành công.";
+        public string GetSlideByIdError = "Lấy chi tiết Slide không thành công.";
         #endregion
 
         #region Message Of Account
