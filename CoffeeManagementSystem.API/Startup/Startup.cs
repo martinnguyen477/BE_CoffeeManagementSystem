@@ -1,18 +1,22 @@
-﻿namespace CoffeeManagementSystem.API.Startup
-{
-    using CoffeeManagementSystem.API.Functions;
-    using Microsoft.AspNetCore.Authentication.JwtBearer;
-    using Microsoft.AspNetCore.Builder;
-    using Microsoft.AspNetCore.Hosting;
-    using Microsoft.Extensions.Configuration;
-    using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.Extensions.Hosting;
-    using Microsoft.IdentityModel.Tokens;
-    using Microsoft.OpenApi.Models;
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
+﻿// <copyright file="Startup.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
+using CoffeeManagementSystem.API.Functions;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CoffeeManagementSystem.API.Startup
+{
     public class Startup
     {
         public Startup(IConfiguration configuration)

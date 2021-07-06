@@ -4,6 +4,7 @@
 
 namespace CoffeeManagementSystem.Services.BaseServices
 {
+
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -15,7 +16,7 @@ namespace CoffeeManagementSystem.Services.BaseServices
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Storage;
 
-    public class BaseServices : IBaseServices    
+    public class BaseServices : IBaseServices
     {
         #region Constructors, Variables, Dispose
 
@@ -46,40 +47,47 @@ namespace CoffeeManagementSystem.Services.BaseServices
 
         #region Get Model
 
-        public IQueryable<T> GetQueryable<T>() where T : BaseTable
+        public IQueryable<T> GetQueryable<T>()
+            where T : BaseTable
         {
             // return _context.Set<T>().AsNoTracking().Where(p => p.Status != 0);
             return Context.Set<T>().AsNoTracking();
         }
 
-        public List<T> GetList<T>() where T : BaseTable
+        public List<T> GetList<T>()
+            where T : BaseTable
         {
             return GetQueryable<T>().ToList();
 
             // return _context.Set<T>().AsParallel().AsOrdered().Where(p => !p.IsDelete).ToList();
         }
 
-        public List<T> GetList<T>(Expression<Func<T, bool>> predicate) where T : BaseTable
+        public List<T> GetList<T>(Expression<Func<T, bool>> predicate)
+            where T : BaseTable
         {
             return GetQueryable<T>().Where(predicate).ToList();
         }
 
-        public T GetObject<T>(object pKey) where T : BaseTable
+        public T GetObject<T>(object pKey)
+            where T : BaseTable
         {
             return Context.Set<T>().Find(pKey);
         }
 
-        public T GetObjectByKey<T>(long pKey) where T : BaseTable
+        public T GetObjectByKey<T>(long pKey)
+            where T : BaseTable
         {
             return Context.Set<T>().Find(pKey);
         }
 
-        public T GetObject<T>(Expression<Func<T, bool>> predicate) where T : BaseTable
+        public T GetObject<T>(Expression<Func<T, bool>> predicate)
+            where T : BaseTable
         {
             return Context.Set<T>().SingleOrDefault(predicate);
         }
 
-        public T GetObject<T>(params object[] pKeys) where T : BaseTable
+        public T GetObject<T>(params object[] pKeys)
+            where T : BaseTable
         {
             return Context.Set<T>().Find(pKeys);
         }
@@ -88,7 +96,8 @@ namespace CoffeeManagementSystem.Services.BaseServices
 
         #region Insert Model
 
-        public bool Insert<T>(T pObj) where T : BaseTable
+        public bool Insert<T>(T pObj)
+            where T : BaseTable
         {
             using var transaction = Context.Database.BeginTransaction();
             try

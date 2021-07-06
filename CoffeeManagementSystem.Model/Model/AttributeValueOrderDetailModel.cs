@@ -7,7 +7,7 @@ namespace CoffeeManagementSystem.Model.Model
     /// <summary>
     /// Thực thể AttributeValueBillDetail.
     /// </summary>
-    public class AttributeValueBillDetailModel
+    public class AttributeValueOrderDetailModel
     {
         /// <summary>
         /// Gets or sets billDetail.

@@ -16,4 +16,28 @@ dotnet_diagnostic.SA1101.severity = silent
 dotnet_diagnostic.SA1202.severity = silent
 
 # Default severity for all analyzer diagnostics
-dotnet_analyzer_diagnostic.severity = silent
+dotnet_analyzer_diagnostic.severity = warning
+
+# Default severity for analyzer diagnostics with category 'StyleCop.CSharp.OrderingRules'
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.OrderingRules.severity = none
+
+# Default severity for analyzer diagnostics with category 'StyleCop.CSharp.DocumentationRules'
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.DocumentationRules.severity = silent
+
+# Default severity for analyzer diagnostics with category 'StyleCop.CSharp.NamingRules'
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.NamingRules.severity = silent
+
+# Default severity for analyzer diagnostics with category 'StyleCop.CSharp.ReadabilityRules'
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.ReadabilityRules.severity = silent
+
+# Default severity for analyzer diagnostics with category 'Style'
+dotnet_analyzer_diagnostic.category-Style.severity = silent
+
+# Default severity for analyzer diagnostics with category 'StyleCop.CSharp.SpacingRules'
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.SpacingRules.severity = silent
+
+# Default severity for analyzer diagnostics with category 'StyleCop.CSharp.LayoutRules'
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.LayoutRules.severity = silent
+
+# Default severity for analyzer diagnostics with category 'StyleCop.CSharp.MaintainabilityRules'
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.MaintainabilityRules.severity = silent

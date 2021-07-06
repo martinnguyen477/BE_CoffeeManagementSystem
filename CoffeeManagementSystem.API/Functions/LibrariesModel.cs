@@ -1,4 +1,8 @@
-﻿using CoffeeManagementSystem.Model.Request;
+﻿// <copyright file="LibrariesModel.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+using CoffeeManagementSystem.Model.Request;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using System;
@@ -9,7 +13,6 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace CoffeeManagementSystem.API.Functions
 {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PAS20nz2yzgjo8+CuSffBjwcpmMRHkL58sNNhyxANLdQMASkS/gK0rJ9uidbAWN18ALodq9Gx0le+KAeP6MorQ==",
+  "dgSpecHash": "0XzUmvPp4lMo2lSy4gFIv0e0im2Dm55EwHE+FmzV4qDKIVeZ7TjDwlQ8YpNNl1yY7WXzGYjYku4l14C560hXcw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nguyen Quoc Cuong\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.API\\CoffeeManagementSystem.API.csproj",
+  "projectFilePath": "C:\\Users\\Nguyen Quoc Cuong\\OneDrive - Hochiminh City University of Education\\Desktop\\PROJECT\\BE_CoffeeManagementSystem\\CoffeeManagementSystem.API\\CoffeeManagementSystem.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nguyen Quoc Cuong\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Nguyen Quoc Cuong\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

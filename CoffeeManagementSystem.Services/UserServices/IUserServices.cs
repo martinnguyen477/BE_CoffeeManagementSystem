@@ -2,14 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.Collections.Generic;
+using System.Security.Claims;
+using CoffeeManagementSystem.Model.Model;
+using CoffeeManagementSystem.Model.Response;
+using CoffeeManagementSystem.Services.BaseServices;
+
 namespace CoffeeManagementSystem.Services.UserServices
 {
-    using System.Collections.Generic;
-    using System.Security.Claims;
-    using CoffeeManagementSystem.Model.Model;
-    using CoffeeManagementSystem.Model.Response;
-    using CoffeeManagementSystem.Services.BaseServices;
-
     public interface IUserServices : IBaseServices
     {
         bool RegisterAccount(UserModel customerModel);

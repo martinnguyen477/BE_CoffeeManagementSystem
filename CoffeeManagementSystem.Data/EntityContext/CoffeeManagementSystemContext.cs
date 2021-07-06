@@ -33,7 +33,7 @@ namespace CoffeeManagementSystem.Data.EntityContext
 
         public virtual DbSet<AttributeEntities> Attribute { get; set; }
 
-        public virtual DbSet<AttributeValueBillDetailEntities> AttributeValueBillDetail { get; set; }
+        public virtual DbSet<AttributeValueOrderDetailEntities> AttributeValueBillDetail { get; set; }
 
         public virtual DbSet<AttributeValueEntities> AttributeValue { get; set; }
 
@@ -60,7 +60,7 @@ namespace CoffeeManagementSystem.Data.EntityContext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<AttributeEntities>().ToTable("Attribute").HasKey(x => x.Id);
-            modelBuilder.Entity<AttributeValueBillDetailEntities>().ToTable("AttributeValueBillDetail").HasKey(x => new { x.BillDetailId, x.AttributeValueId });
+            modelBuilder.Entity<AttributeValueOrderDetailEntities>().ToTable("AttributeValueBillDetail").HasKey(x => new { x.BillDetailId, x.AttributeValueId });
             modelBuilder.Entity<AttributeValueEntities>().ToTable("AttributeValue").HasKey(x => x.Id);
             modelBuilder.Entity<BranchEntities>().ToTable("Branch").HasKey(x => x.Id);
             modelBuilder.Entity<CartEntities>().ToTable("Cart").HasKey(x => x.Id);

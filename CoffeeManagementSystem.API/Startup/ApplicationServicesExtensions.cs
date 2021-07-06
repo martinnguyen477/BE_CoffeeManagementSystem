@@ -4,10 +4,16 @@
 
 namespace CoffeeManagementSystem.API.Startup
 {
+    using CoffeeManagementSystem.Services.AttributeServices;
+    using CoffeeManagementSystem.Services.AttributeValueOrderDetailServices;
     using CoffeeManagementSystem.Services.AuthenticationServices;
     using CoffeeManagementSystem.Services.BranchServices;
+    using CoffeeManagementSystem.Services.CartItemServices;
+    using CoffeeManagementSystem.Services.CartServices;
     using CoffeeManagementSystem.Services.CategoryServices;
     using CoffeeManagementSystem.Services.ImportFileServices;
+    using CoffeeManagementSystem.Services.OrderDetailServices;
+    using CoffeeManagementSystem.Services.OrderServices;
     using CoffeeManagementSystem.Services.PositionServices;
     using CoffeeManagementSystem.Services.ProductServices;
     using CoffeeManagementSystem.Services.SlideServices;
@@ -18,10 +24,16 @@ namespace CoffeeManagementSystem.API.Startup
     {
         public static void AddApplicationServicesExtensions(this IServiceCollection services)
         {
+            services.AddTransient<IAttributeServices, AttributeServices>();
+            services.AddTransient<IAttributeValueOrderDetailServices, AttributeValueOrderDetailServices>();
             services.AddTransient<IAuthenticationServices, AuthenticationServices>();
             services.AddTransient<IBranchServices, BranchServices>();
+            services.AddTransient<ICartItemServices, CartItemServices>();
+            services.AddTransient<ICartServices, CartServices>();
             services.AddTransient<ICategoryServices, CategoryServices>();
             services.AddTransient<IImportFileServices, ImportFileServices>();
+            services.AddTransient<IOrderDetailServices, OrderDetailServices>();
+            services.AddTransient<IOrderServices, OrderServices>();
             services.AddTransient<IPositionServices, PositionServices>();
             services.AddTransient<IProductServices, ProductServices>();
             services.AddTransient<ISlideServices, SlideServices>();

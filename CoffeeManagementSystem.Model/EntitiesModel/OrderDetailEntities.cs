@@ -9,7 +9,7 @@ namespace CoffeeManagementSystem.Model.EntitiesModel
     /// <summary>
     /// Thực thể hóa đơn chi tiết.
     /// </summary>
-    public class OrderDetailEntities : BaseTable
+    public class OrderDetailEntities : BaseTableWithId
     {
         /// <summary>
         /// Gets or sets mã sản phẩm.

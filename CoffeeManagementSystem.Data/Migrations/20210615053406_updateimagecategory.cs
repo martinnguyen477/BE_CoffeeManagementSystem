@@ -1,4 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿// <copyright file="20210615053406_updateimagecategory.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CoffeeManagementSystem.Data.Migrations
 {
