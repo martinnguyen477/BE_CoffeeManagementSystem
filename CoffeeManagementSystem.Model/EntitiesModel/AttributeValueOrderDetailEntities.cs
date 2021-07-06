@@ -1,4 +1,4 @@
-﻿// <copyright file="AttributeValueBillDetailEntities.cs" company="PlaceholderCompany">
+﻿// <copyright file="AttributeValueOrderDetailEntities.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
@@ -9,7 +9,7 @@ namespace CoffeeManagementSystem.Model.EntitiesModel
     /// <summary>
     /// Thực thể AttributeValueBillDetail.
     /// </summary>
-    public class AttributeValueBillDetailEntities : BaseTable
+    public class AttributeValueOrderDetailEntities : BaseTableWithId
     {
         /// <summary>
         /// Gets or sets billDetail.

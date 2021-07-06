@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2021-07-06T11:40:28.3409508Z"
+    },
+    "apis1": {
+      "restored": true,
+      "restoreTime": "2021-07-06T09:46:52.3392855Z"
+    }
+  },
+  "parameters": {
+    "apis1.resourceGroupName": {
+      "Name": "apis1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "BE_CofffeeManagementSystem"
+    },
+    "apis1.subscriptionId": {
+      "Name": "apis1.subscriptionId",
+      "Type": "subscription",
+      "Value": "02da2f7b-b897-4281-aee3-a73e0c4988d1"
+    }
+  }
+}

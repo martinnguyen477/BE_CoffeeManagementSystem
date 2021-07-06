@@ -1,7 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿// <copyright file="ESex.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 using System.ComponentModel;
-using System.Text;
 
 namespace CoffeeManagementSystem.Model.Enum
 {

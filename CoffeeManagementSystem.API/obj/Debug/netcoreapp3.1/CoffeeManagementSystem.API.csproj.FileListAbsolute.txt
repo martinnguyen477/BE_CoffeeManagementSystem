@@ -125,6 +125,8 @@ C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManag
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.API\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.API\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.API.dll
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.API\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.API.pdb
+<<<<<<< HEAD
+=======
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.API\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.API\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.API\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.API.exe
@@ -236,6 +238,7 @@ C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManag
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.API\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.API.RazorTargetAssemblyInfo.cache
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.API\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.API.csproj.CopyComplete
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.API\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.API.genruntimeconfig.cache
+>>>>>>> 6cf459e8c6823b75cc993bcf2632bb3cdbaa2533
 C:\Users\Nguyen Quoc Cuong\OneDrive - Hochiminh City University of Education\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.API\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Nguyen Quoc Cuong\OneDrive - Hochiminh City University of Education\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.API\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Nguyen Quoc Cuong\OneDrive - Hochiminh City University of Education\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.API\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.API.exe

@@ -18,6 +18,8 @@ C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManag
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.Services\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.csproj.CoreCompileInputs.cache
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.Services\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.dll
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.Services\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.pdb
+<<<<<<< HEAD
+=======
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.Services\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.deps.json
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.Services\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.dll
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.Services\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.pdb
@@ -26,6 +28,7 @@ C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManag
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.Services\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.Data.pdb
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.Services\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.Model.pdb
 C:\Users\Nguyen Quoc Cuong\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.Services\obj\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.csproj.CopyComplete
+>>>>>>> 6cf459e8c6823b75cc993bcf2632bb3cdbaa2533
 C:\Users\Nguyen Quoc Cuong\OneDrive - Hochiminh City University of Education\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.Services\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.deps.json
 C:\Users\Nguyen Quoc Cuong\OneDrive - Hochiminh City University of Education\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.Services\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.dll
 C:\Users\Nguyen Quoc Cuong\OneDrive - Hochiminh City University of Education\Desktop\PROJECT\BE_CoffeeManagementSystem\CoffeeManagementSystem.Services\bin\Debug\netcoreapp3.1\CoffeeManagementSystem.Services.pdb

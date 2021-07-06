@@ -9,7 +9,7 @@ namespace CoffeeManagementSystem.Model.EntitiesModel
     /// <summary>
     /// CartItemEntities.
     /// </summary>
-    public class CartItemEntities : BaseTable
+    public class CartItemEntities : BaseTableWithId
     {
         /// <summary>
         /// Gets or sets mã giỏ hàng.

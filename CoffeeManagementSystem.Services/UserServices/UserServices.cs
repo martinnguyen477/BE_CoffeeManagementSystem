@@ -2,19 +2,19 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
+using AutoMapper;
+using CoffeeManagementSystem.Data.EntityContext;
+using CoffeeManagementSystem.Model.EntitiesModel;
+using CoffeeManagementSystem.Model.Model;
+using CoffeeManagementSystem.Model.Response;
+using CoffeeManagementSystem.Services.BaseServices;
+
 namespace CoffeeManagementSystem.Services.UserServices
 {
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Security.Claims;
-    using AutoMapper;
-    using CoffeeManagementSystem.Data.EntityContext;
-    using CoffeeManagementSystem.Model.EntitiesModel;
-    using CoffeeManagementSystem.Model.Model;
-    using CoffeeManagementSystem.Model.Response;
-    using CoffeeManagementSystem.Services.BaseServices;
-
-    public class UserServices : BaseServices, IUserServices
+    public class UserServices : BaseServices.BaseServices, IUserServices
     {
         private readonly IMapper _mapper;
 
