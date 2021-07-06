@@ -4,14 +4,16 @@ using CoffeeManagementSystem.Data.EntityContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CoffeeManagementSystem.Data.Migrations
 {
     [DbContext(typeof(CoffeeManagementSystemContext))]
-    partial class CoffeeManagementSystemContextModelSnapshot : ModelSnapshot
+    [Migration("20210702175005_UpdateDataUpload")]
+    partial class UpdateDataUpload
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,6 +61,34 @@ namespace CoffeeManagementSystem.Data.Migrations
                             UpdateBy = 1,
                             UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
                         });
+                });
+
+            modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.AttributeValueBillDetailEntities", b =>
+                {
+                    b.Property<int>("BillDetailId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AttributeValueId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CreateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UpdateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("BillDetailId", "AttributeValueId");
+
+                    b.ToTable("AttributeValueBillDetail");
                 });
 
             modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.AttributeValueEntities", b =>
@@ -388,39 +418,6 @@ namespace CoffeeManagementSystem.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.AttributeValueOrderDetailEntities", b =>
-                {
-                    b.Property<int>("BillDetailId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("AttributeValueId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CreateBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UpdateBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("BillDetailId", "AttributeValueId");
-
-                    b.ToTable("AttributeValueBillDetail");
-                });
-
             modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.BranchEntities", b =>
                 {
                     b.Property<int>("Id")
@@ -581,11 +578,6 @@ namespace CoffeeManagementSystem.Data.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -889,11 +881,6 @@ namespace CoffeeManagementSystem.Data.Migrations
 
                     b.Property<int>("Discount")
                         .HasColumnType("int");
-
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Note")
                         .HasColumnType("nvarchar(max)");

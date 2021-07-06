@@ -13,10 +13,16 @@ namespace CoffeeManagementSystem.Services.SlideServices
     public interface ISlideServices : IBaseServices
     {
         /// <summary>
+        /// DS SLIDE
+        /// </summary>
+        /// <returns></returns>
+        List<SlideModel> GetListSlides();
+
+        /// <summary>
         /// Lấy danh sách slide.
         /// </summary>
         /// <returns></returns>
-        List<SlideModel> GetListSlides(int pageSize, int pageNumber);
+        List<SlideModel> GetListSlidesPaging(int pageSize, int pageNumber);
 
         /// <summary>
         /// Lấy danh sách slide hoạt động.

@@ -38,7 +38,7 @@ namespace CoffeeManagementSystem.Services.CategoryServices
         /// <param name="apiSecret">api secrect.</param>
         /// <param name="categoryModel">Model hứng data từ client.</param>
         /// <returns></returns>
-        CategoryModel UpdateCategory(IFormFile formFile, string cloudName, string apiKey, string apiSecret, CategoryModel categoryModel);
+        CategoryModel UpdateCategory(IFormFile formFile, string cloudName, string apiKey, string apiSecret, CategoryModel categoryModel, string publicId);
 
         /// <summary>
         /// Xóa category
@@ -59,5 +59,7 @@ namespace CoffeeManagementSystem.Services.CategoryServices
         /// </summary>
         /// <returns></returns>
         List<CategoryModel> GetCategoryActive();
+
+        List<CategoryModel> GetCategoryPaging(int pageIndex, int pageSize);
     }
 }

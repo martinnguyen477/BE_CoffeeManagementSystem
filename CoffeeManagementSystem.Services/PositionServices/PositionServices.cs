@@ -7,6 +7,7 @@ namespace CoffeeManagementSystem.Services.PositionServices
     using System.Collections.Generic;
     using System.Linq;
     using AutoMapper;
+    using CoffeeManagementSystem.Data.EntityContext;
     using CoffeeManagementSystem.Model.EntitiesModel;
     using CoffeeManagementSystem.Model.Model;
     using CoffeeManagementSystem.Model.Response;
@@ -19,6 +20,7 @@ namespace CoffeeManagementSystem.Services.PositionServices
         public PositionServices(IMapper mapper)
         {
             _mapper = mapper;
+            Context = new CoffeeManagementSystemContext();
         }
         #endregion
 
@@ -35,7 +37,7 @@ namespace CoffeeManagementSystem.Services.PositionServices
             PositionEntities position = GetObject<PositionEntities>(po => po.Id == positionId);
             if(position != null)
             {
-                return DeleteObject<PositionEntities>(position);
+                return Delete<PositionEntities>(position.Id);
             }
             return false;
         }
@@ -55,7 +57,10 @@ namespace CoffeeManagementSystem.Services.PositionServices
                                 CreateBy = po.CreateBy,
                                 CreateByUser = us.LastName + " " + us.FirstName,
                                 UpdateBy = po.UpdateBy,
-                                UpdateByUser = us2.LastName + " " + us2.FirstName
+                                UpdateByUser = us2.LastName + " " + us2.FirstName,
+                                Status = po.Status,
+                                CreateDate = po.CreateDate,
+                                UpdateDate = po.UpdateDate
                             }).FirstOrDefault();
             return position;            
         }

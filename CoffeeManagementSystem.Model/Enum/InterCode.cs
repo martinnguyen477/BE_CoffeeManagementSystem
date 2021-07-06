@@ -159,6 +159,37 @@ namespace CoffeeManagementSystem.Model.Enum
         /// DeleteProductError.
         /// </summary>
         public string DeleteProductError = "CoffeeManagementSystem_030";
+
+        /// <summary>
+        /// Gets or sets createPositionError.
+        /// </summary>
+        public string CreatePositionError = "CoffeeManagementSystem_031";
+
+        /// <summary>
+        /// UpdatePositionError.
+        /// </summary>
+        public string UpdatePositionError = "CoffeeManagementSystem_031";
+
+        /// <summary>
+        /// Gets or sets CreateBranchError.
+        /// </summary>
+        public string CreateBranchError = "CoffeeManagementSystem_033";
+
+        /// <summary>
+        /// UpdateBranchError.
+        /// </summary>
+        public string UpdateBranchError = "CoffeeManagementSystem_034";
+
+        /// <summary>
+        /// Gets or sets CreateBranchError.
+        /// </summary>
+        public string CreateSlideError = "CoffeeManagementSystem_035";
+
+        /// <summary>
+        /// UpdateBranchError.
+        /// </summary>
+        public string UpdateSlideError = "CoffeeManagementSystem_036";
+
     }
 
 }

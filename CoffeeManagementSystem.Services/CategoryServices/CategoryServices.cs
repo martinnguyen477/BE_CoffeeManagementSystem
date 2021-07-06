@@ -97,19 +97,15 @@ namespace CoffeeManagementSystem.Services.CategoryServices
         #endregion
 
         #region UpdateCategory DONE
-        public CategoryModel UpdateCategory(IFormFile formFile, string cloudName, string apiKey, string apiSecret, CategoryModel categoryModel)
+        public CategoryModel UpdateCategory(IFormFile formFile, string cloudName, string apiKey, string apiSecret, CategoryModel categoryModel, string publicId)
         {
-            CategoryEntities objectData = GetObject<CategoryEntities>(c => c.Id == categoryModel.Id);
-            if(objectData != null)
+            if (formFile != null)
             {
-                if(formFile != null)
-                {
-                    _importFileServices.DeleteImageAsync(objectData.PublicIdImage, cloudName, apiKey, apiSecret);
-                    var resultUploadImage = _importFileServices.AddPhotoCloudAsync(formFile, cloudName, apiKey, apiSecret);
-                    categoryModel.PublicIdImage = resultUploadImage.Result.PublicId;
-                    categoryModel.UrlImageCategory = resultUploadImage.Result.UrlImage;
-                }    
-            }    
+                _importFileServices.DeleteImageAsync(publicId, cloudName, apiKey, apiSecret);
+                var resultUploadImage = _importFileServices.AddPhotoCloudAsync(formFile, cloudName, apiKey, apiSecret);
+                categoryModel.PublicIdImage = resultUploadImage.Result.PublicId;
+                categoryModel.UrlImageCategory = resultUploadImage.Result.UrlImage;
+            }
             var resultData = _mapper.Map<CategoryModel>(UpdateReturnModel(_mapper.Map<CategoryEntities>(categoryModel)));
             
             return resultData;
@@ -121,6 +117,19 @@ namespace CoffeeManagementSystem.Services.CategoryServices
         public List<CategoryModel> GetCategoryActive()
         {
             return _mapper.Map<List<CategoryModel>>(GetList<CategoryEntities>(c => c.Status == Model.Enum.StatusSystem.Active));
+        }
+        #endregion
+
+        #region Get Category Paging DONE
+        public List<CategoryModel> GetCategoryPaging(int pageIndex, int pageSize)
+        {
+            List<CategoryModel> categories = _mapper.Map<List<CategoryModel>>(GetList<CategoryEntities>());
+
+            if(pageIndex != 0)
+            {
+                categories = categories.Skip(pageSize * (pageIndex - 1)).Take(pageSize).ToList();
+            }
+            return categories;
         }
         #endregion
     }

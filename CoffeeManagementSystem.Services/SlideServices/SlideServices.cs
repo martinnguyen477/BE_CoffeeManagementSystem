@@ -31,7 +31,7 @@ namespace CoffeeManagementSystem.Services.SlideServices
         #endregion
 
         #region GetListSlides
-        public List<SlideModel> GetListSlides(int pageSize, int pageNumber)
+        public List<SlideModel> GetListSlidesPaging(int pageSize, int pageNumber)
         {
             List<SlideModel> slideModels =  _mapper.Map<List<SlideModel>>(GetList<SlideEntities>());
             if(pageNumber != 0)
@@ -88,7 +88,10 @@ namespace CoffeeManagementSystem.Services.SlideServices
                 slideModel.PublicId = resultUploadCloud.Result.PublicId;
                 slideModel.UrlSlideImage = resultUploadCloud.Result.UrlImage;
             }
-            slideModel.UrlSlideImage = CoffeeManagementSystemConfig.DefaultUrlImageSlide;
+            else
+            {
+                slideModel.UrlSlideImage = CoffeeManagementSystemConfig.DefaultUrlImageSlide;
+            }    
 
             return _mapper.Map<SlideModel>(InsertReturnModel(_mapper.Map<SlideEntities>(slideModel)));
         }
@@ -114,10 +117,19 @@ namespace CoffeeManagementSystem.Services.SlideServices
             SlideEntities slide = GetObject<SlideEntities>(sl => sl.Id == slideId);
             if(slide.Id != 0 )
             {
-                return DeleteObject<SlideEntities>(slide);
+                return Delete<SlideEntities>(slide.Id);
             }
             return false;
         }
         #endregion
+
+        #region GetListSlides
+
+        public List<SlideModel> GetListSlides()
+        {
+           return _mapper.Map<List<SlideModel>>(GetList<SlideEntities>());
+        }
+        #endregion
+
     }
 }

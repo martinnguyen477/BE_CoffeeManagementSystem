@@ -95,6 +95,66 @@ namespace CoffeeManagementSystem.API.Controllers
         }
         #endregion
 
+        #region Get Category Paging DONE TEST
+        [HttpGet]
+        public RepositoryModel<List<CategoryModel>> GetCategoryPaging(int pageIndex, int pageSize)
+        {
+            //Lấy tên Controller, Action, Key
+            var controllerName = ControllerContext.ActionDescriptor.ControllerName;
+            var actionName = ControllerContext.ActionDescriptor.ActionName;
+            var key = DateTime.Now.ToString(CoffeeManagementSystemConfig.DateExpSqlFormat);
+
+            //Khở tạo model này là success. Và create data = null.
+            RepositoryModel<List<CategoryModel>> result = new RepositoryModel<List<CategoryModel>>()
+            {
+                PartnerCode = _internalCode.SuccessFull,
+                RetCode = ERetCodeSystem.Successfull,
+                Data = new List<CategoryModel>()
+            };
+
+            try
+            {
+                var listCategory = _categoryServices.GetCategoryPaging(pageIndex, pageSize);
+
+                if (listCategory.Count > 0)
+                {
+                    result.Data = listCategory;
+                    result.Messenger = new MessengerError()
+                    {
+                        TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
+                        InternalMessage = _internalMessenger.GetPositionSuccess,
+                        HttpCode = ERepositoryStatus.Success,
+                        SystemMessage = _internalMessenger.GetPositionSuccess
+                    };
+                }
+                else
+                {
+                    result.PartnerCode = _internalCode.GetDataError;
+                    result.Messenger = new MessengerError()
+                    {
+                        TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
+                        InternalMessage = _internalMessenger.GetPositionNoExists,
+                        HttpCode = ERepositoryStatus.Error,
+                        SystemMessage = _internalMessenger.GetPositionNoExists
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                result.RetCode = ERetCodeSystem.SystemError;
+                result.PartnerCode = _internalCode.SystemError;
+                result.Messenger = new MessengerError()
+                {
+                    TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
+                    InternalMessage = ex.Message,
+                    HttpCode = ERepositoryStatus.InternalError,
+                    SystemMessage = ex.ToString()
+                };
+            }
+            return result;
+        }
+        #endregion
+
         #region Get Category Detail (Được tạo bởi, Update bởi mapping với bảng user) DONE TEST TEST 2
         [HttpGet]
         public RepositoryModel<CategoryDetailById> GetDetailCategoryById([FromForm] int categoryId)
@@ -360,10 +420,13 @@ namespace CoffeeManagementSystem.API.Controllers
                     };
                     return result;
                 }
-                categoryModel.UpdateBy = CookieViewModel.Id;
-                var updateCategory = _categoryServices.UpdateCategory(fileImage, CoffeeManagementSystemConfig.CloudName, CoffeeManagementSystemConfig.APIKey, CoffeeManagementSystemConfig.APISecret, categoryModel);
-                if (updateCategory.Id != 0)
+                
+                var resultObject = _categoryServices.GetObject<CategoryEntities>(cate => cate.Id == categoryModel.Id);
+                
+                if (resultObject != null)
                 {
+                    categoryModel.UpdateBy = CookieViewModel.Id;
+                    var updateCategory = _categoryServices.UpdateCategory(fileImage, CoffeeManagementSystemConfig.CloudName, CoffeeManagementSystemConfig.APIKey, CoffeeManagementSystemConfig.APISecret, categoryModel, resultObject.PublicIdImage);
                     result.Data.ReturnId = "" + PrefixResponse.Category + "_" + updateCategory.Id;
                     result.Messenger = new MessengerError()
                     {
