@@ -2,12 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using CoffeeManagementSystem.Model.BaseModel;
+
 namespace CoffeeManagementSystem.Model.Model
 {
     /// <summary>
     /// CartItemEntities.
     /// </summary>
-    public class CartItemModel
+    public class CartItemModel : BaseTableWithId
     {
         /// <summary>
         /// Gets or sets mã giỏ hàng.

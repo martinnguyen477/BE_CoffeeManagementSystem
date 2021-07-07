@@ -57,9 +57,9 @@ namespace CoffeeManagementSystem.Model.Enum
 
         #region Message Of Position
         public string GetPositionNoExists = "Không có vị trí nào trong hệ thống.";
-        public string GetPositionSuccess = "Lấy danh sách vị trí nào trong hệ thống.";
+        public string GetPositionSuccess = "Lấy danh sách vị trí trong hệ thống.";
         public string CreatePositionNameIdNull = "Không được để tên vị trí trống.";
-        public string CreatePositionError = "Thêm vị mới không thành công.";
+        public string CreatePositionError = "Thêm vị trí mới không thành công.";
         public string UpdatePositionError = "Không tìm thấy vị trí này.";
         public string UpdatePositionSuccess = "Sửa vị trí thành công.";
         public string DeletePositionError = "Xóa vị trí không thành công.";
@@ -108,6 +108,62 @@ namespace CoffeeManagementSystem.Model.Enum
         public string InsertProductError = "Thêm sản phẩm thất bại";
         public string DeleteProductSucess = "Xóa sản phẩm thành công";
         public string DeleteProductError = "Xóa sản phẩm thất bại";
+        #endregion
+
+        #region OrderDetail
+        public string GetOrderDetailNoExists = "Không có đơn hàng chi tiết nào trong hệ thống.";
+        public string GetOrderDetailSuccess = "Lấy danh sách đơn hàng chi tiết trong hệ thống.";
+        public string CreateOrderDetailNameIdNull = "Không được để tên vị trí trống.";
+        public string CreateOrderDetailError = "Thêm đơn hàng chi tiết mới không thành công.";
+        public string CreateOrderDetailSuccess = "Thêm đơn hàng chi tiết mới không thành công.";
+        public string UpdateOrderDetailError = "Không tìm thấy đơn hàng chi tiết này.";
+        public string UpdateOrderDetailSuccess = "Sửa đơn hàng chi tiết thành công.";
+        public string DeleteOrderDetailError = "Xóa đơn hàng chi tiết không thành công.";
+        public string DeleteOrderDetailSucces = "Xóa đơn hàng chi tiết thành công.";
+        public string GetOrderDetailByIdSuccess = "Lấy chi tiết đơn hàng chi tiết thành công.";
+        public string GetOrderDetailByIdError = "Lấy chi tiết đơn hàng chi tiết không thành công.";
+        #endregion
+
+        #region Order
+        public string GetOrderNoExists = "Không có đơn hàng nào trong hệ thống.";
+        public string GetOrderSuccess = "Lấy danh sách đơn hàng trong hệ thống.";
+        public string CreateOrderNameIdNull = "Không được để tên vị trí trống.";
+        public string CreateOrderError = "Thêm đơn hàng mới không thành công.";
+        public string CreateOrderSuccess = "Thêm đơn hàng mới không thành công.";
+        public string UpdateOrderError = "Không tìm thấy đơn hàng này.";
+        public string UpdateOrderSuccess = "Sửa đơn hàng thành công.";
+        public string DeleteOrderError = "Xóa đơn hàng không thành công.";
+        public string DeleteOrderSucces = "Xóa đơn hàng thành công.";
+        public string GetOrderByIdSuccess = "Lấy chi tiết đơn hàng thành công.";
+        public string GetOrderByIdError = "Lấy chi tiết đơn hàng không thành công.";
+        #endregion
+
+        #region Order
+        public string GetCartItemNoExists = "Không có món nào trong hệ thống.";
+        public string GetCartItemSuccess = "Lấy danh sách món trong hệ thống.";
+        public string CreateCartItemNameIdNull = "Không được để tên món trống.";
+        public string CreateCartItemError = "Thêm món mới vào giỏ hàng không thành công.";
+        public string CreateCartItemSuccess = "Thêm món mới vào giỏ hàng không thành công.";
+        public string UpdateCartItemError = "Không tìm thấy món này.";
+        public string UpdateCartItemSuccess = "Sửa món thành công.";
+        public string DeleteCartItemError = "Xóa món không thành công.";
+        public string DeleteCartItemSucces = "Xóa món thành công.";
+        public string GetCartItemByIdSuccess = "Lấy chi tiết món thành công.";
+        public string GetCartItemByIdError = "Lấy chi tiết món không thành công.";
+        #endregion
+
+        #region Order
+        public string GetCartNoExists = "Không có món nào trong hệ thống.";
+        public string GetCartSuccess = "Lấy danh sách món trong hệ thống.";
+        public string CreateCartNameIdNull = "Không được để tên món trống.";
+        public string CreateCartError = "Thêm món mới vào giỏ hàng không thành công.";
+        public string CreateCartSuccess = "Thêm món mới vào giỏ hàng không thành công.";
+        public string UpdateCartError = "Không tìm thấy món này.";
+        public string UpdateCartSuccess = "Sửa món thành công.";
+        public string DeleteCartError = "Xóa món không thành công.";
+        public string DeleteCartSucces = "Xóa món thành công.";
+        public string GetCartByIdSuccess = "Lấy chi tiết món thành công.";
+        public string GetCartByIdError = "Lấy chi tiết món không thành công.";
         #endregion
     }
 }
