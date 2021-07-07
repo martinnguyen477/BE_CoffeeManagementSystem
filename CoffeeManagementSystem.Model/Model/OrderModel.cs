@@ -2,12 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using CoffeeManagementSystem.Model.BaseModel;
+
 namespace CoffeeManagementSystem.Model.Model
 {
     /// <summary>
     /// Thực thể Hóa đơn.
     /// </summary>
-    public class OrderModel
+    public class OrderModel : BaseTableWithId
     {
         /// <summary>
         /// Gets or sets mã nhân viên.

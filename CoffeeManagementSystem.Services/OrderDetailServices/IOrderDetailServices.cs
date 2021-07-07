@@ -13,9 +13,9 @@ namespace CoffeeManagementSystem.Services.OrderDetailServices
 
         List<OrderDetailModel> GetListOrderDetailAllPaging(int pageIndex, int pageSize);
 
-        OrderDetailModel CreateOrderDetail(OrderDetailModel orderModel);
+        OrderDetailModel CreateOrderDetail(OrderDetailModel orderDetailModel);
 
-        OrderDetailModel UpdateOrderDetail(OrderDetailModel orderModel);
+        OrderDetailModel UpdateOrderDetail(OrderDetailModel orderDetailModel);
 
         OrderDetailModel GetOrderDetailById(int orderId);
 

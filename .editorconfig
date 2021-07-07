@@ -16,7 +16,7 @@ dotnet_diagnostic.SA1101.severity = silent
 dotnet_diagnostic.SA1202.severity = silent
 
 # Default severity for all analyzer diagnostics
-dotnet_analyzer_diagnostic.severity = warning
+dotnet_analyzer_diagnostic.severity = suggestion
 
 # Default severity for analyzer diagnostics with category 'StyleCop.CSharp.OrderingRules'
 dotnet_analyzer_diagnostic.category-StyleCop.CSharp.OrderingRules.severity = none
@@ -25,7 +25,7 @@ dotnet_analyzer_diagnostic.category-StyleCop.CSharp.OrderingRules.severity = non
 dotnet_analyzer_diagnostic.category-StyleCop.CSharp.DocumentationRules.severity = silent
 
 # Default severity for analyzer diagnostics with category 'StyleCop.CSharp.NamingRules'
-dotnet_analyzer_diagnostic.category-StyleCop.CSharp.NamingRules.severity = silent
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.NamingRules.severity = none
 
 # Default severity for analyzer diagnostics with category 'StyleCop.CSharp.ReadabilityRules'
 dotnet_analyzer_diagnostic.category-StyleCop.CSharp.ReadabilityRules.severity = silent

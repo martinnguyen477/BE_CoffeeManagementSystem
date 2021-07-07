@@ -190,6 +190,67 @@ namespace CoffeeManagementSystem.Model.Enum
         /// </summary>
         public string UpdateSlideError = "CoffeeManagementSystem_036";
 
+        /// <summary>
+        /// CreateOrderDetailError.
+        /// </summary>
+        public string CreateOrderDetailError = "CoffeeManagementSystem_037";
+
+        /// <summary>
+        /// UpdateOrderDetailError.
+        /// </summary>
+        public string UpdateOrderDetailError = "CoffeeManagementSystem_038";
+
+        /// <summary>
+        /// DeleteOrderDetailError.
+        /// </summary>
+        public string DeleteOrderDetailError = "CoffeeManagementSystem_039";
+
+        /// <summary>
+        /// CreateOrderError.
+        /// </summary>
+        public string CreateOrderError = "CoffeeManagementSystem_040";
+
+        /// <summary>
+        /// UpdateOrderError.
+        /// </summary>
+        public string UpdateOrderError = "CoffeeManagementSystem_041";
+
+        /// <summary>
+        /// DeleteOrderError.
+        /// </summary>
+        public string DeleteOrderError = "CoffeeManagementSystem_042";
+
+        /// <summary>
+        /// CreateCartError.
+        /// </summary>
+        public string CreateCartItemError = "CoffeeManagementSystem_043";
+
+        /// <summary>
+        /// UpdateCartError.
+        /// </summary>
+        public string UpdateCartItemError = "CoffeeManagementSystem_044";
+
+        /// <summary>
+        /// DeleteCartItemError.
+        /// </summary>
+        public string DeleteCartItemError = "CoffeeManagementSystem_045";
+
+        /// <summary>
+        /// CreateCartError.
+        /// </summary>
+        public string CreateCartError = "CoffeeManagementSystem_046";
+
+        /// <summary>
+        /// UpdateCartError.
+        /// </summary>
+        public string UpdateCartError = "CoffeeManagementSystem_047";
+
+        /// <summary>
+        /// DeleteCartError.
+        /// </summary>
+        public string DeleteCartError = "CoffeeManagementSystem_048";
+
+
     }
 
 }
