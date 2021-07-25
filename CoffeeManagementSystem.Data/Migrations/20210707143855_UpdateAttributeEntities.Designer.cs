@@ -4,20 +4,731 @@ using CoffeeManagementSystem.Data.EntityContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CoffeeManagementSystem.Data.Migrations
 {
     [DbContext(typeof(CoffeeManagementSystemContext))]
-    partial class CoffeeManagementSystemContextModelSnapshot : ModelSnapshot
+    [Migration("20210707143855_UpdateAttributeEntities")]
+    partial class UpdateAttributeEntities
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.15")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.AttributeEntities", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AttributeName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CreateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UpdateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Attribute");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AttributeName = "Size",
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AttributeName = "Price",
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        });
+                });
+
+            modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.AttributeValueEntities", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AttributeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CreateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UpdateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AttributeValue");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "S"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "M"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "L"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "XL"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            AttributeId = 2,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "15000"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "18000"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "20000"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "25000"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "30000"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "32000"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "35000"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "38000"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            AttributeId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            Value = "40000"
+                        });
+                });
+
+            modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.AttributeValueOrderDetailEntities", b =>
+                {
+                    b.Property<int>("BillDetailId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AttributeValueId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CreateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UpdateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("BillDetailId", "AttributeValueId");
+
+                    b.ToTable("AttributeValueBillDetail");
+                });
+
+            modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.AttributeValuesToProducts", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AttributeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AttributeValueId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CreateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UpdateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AttributeValuesToProduct");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AttributeId = 1,
+                            AttributeValueId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 1,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AttributeId = 1,
+                            AttributeValueId = 2,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 1,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AttributeId = 1,
+                            AttributeValueId = 3,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 1,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            AttributeId = 1,
+                            AttributeValueId = 4,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 1,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            AttributeId = 2,
+                            AttributeValueId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 1,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 6,
+                            AttributeId = 2,
+                            AttributeValueId = 2,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 1,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 7,
+                            AttributeId = 2,
+                            AttributeValueId = 3,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 1,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 8,
+                            AttributeId = 2,
+                            AttributeValueId = 4,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 1,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 9,
+                            AttributeId = 1,
+                            AttributeValueId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 2,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 10,
+                            AttributeId = 1,
+                            AttributeValueId = 2,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 2,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 11,
+                            AttributeId = 2,
+                            AttributeValueId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 2,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 12,
+                            AttributeId = 2,
+                            AttributeValueId = 2,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 2,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 13,
+                            AttributeId = 1,
+                            AttributeValueId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 3,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 14,
+                            AttributeId = 1,
+                            AttributeValueId = 2,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 3,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 15,
+                            AttributeId = 1,
+                            AttributeValueId = 3,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 3,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 16,
+                            AttributeId = 2,
+                            AttributeValueId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 3,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 17,
+                            AttributeId = 2,
+                            AttributeValueId = 2,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 3,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 18,
+                            AttributeId = 3,
+                            AttributeValueId = 3,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 3,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 19,
+                            AttributeId = 1,
+                            AttributeValueId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 4,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 20,
+                            AttributeId = 1,
+                            AttributeValueId = 2,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 4,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 21,
+                            AttributeId = 1,
+                            AttributeValueId = 3,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 4,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 22,
+                            AttributeId = 1,
+                            AttributeValueId = 4,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 4,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 23,
+                            AttributeId = 2,
+                            AttributeValueId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 4,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 24,
+                            AttributeId = 2,
+                            AttributeValueId = 2,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 4,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 25,
+                            AttributeId = 2,
+                            AttributeValueId = 3,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 4,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 26,
+                            AttributeId = 2,
+                            AttributeValueId = 4,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 4,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 27,
+                            AttributeId = 1,
+                            AttributeValueId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 5,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 28,
+                            AttributeId = 1,
+                            AttributeValueId = 2,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 5,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 29,
+                            AttributeId = 1,
+                            AttributeValueId = 3,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 5,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 30,
+                            AttributeId = 1,
+                            AttributeValueId = 4,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 5,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 31,
+                            AttributeId = 2,
+                            AttributeValueId = 1,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 5,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 32,
+                            AttributeId = 2,
+                            AttributeValueId = 2,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 5,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 33,
+                            AttributeId = 2,
+                            AttributeValueId = 3,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 5,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 34,
+                            AttributeId = 2,
+                            AttributeValueId = 4,
+                            CreateBy = 1,
+                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
+                            ProductId = 5,
+                            Status = 1,
+                            UpdateBy = 1,
+                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
+                        });
+                });
 
             modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.BranchEntities", b =>
                 {
@@ -1074,176 +1785,6 @@ namespace CoffeeManagementSystem.Data.Migrations
                             CreateBy = 1,
                             CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
                             RoleName = "General List Category",
-                            Status = 1,
-                            UpdateBy = 1,
-                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
-                        });
-                });
-
-            modelBuilder.Entity("CoffeeManagementSystem.Model.EntitiesModel.SizeEntities", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CreateBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("SizeName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UpdateBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Size");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreateBy = 1,
-                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            Price = 25000m,
-                            ProductId = 1,
-                            SizeName = "M",
-                            Status = 1,
-                            UpdateBy = 1,
-                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreateBy = 1,
-                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            Price = 30000m,
-                            ProductId = 1,
-                            SizeName = "L",
-                            Status = 1,
-                            UpdateBy = 1,
-                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreateBy = 1,
-                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            Price = 35000m,
-                            ProductId = 1,
-                            SizeName = "XL",
-                            Status = 1,
-                            UpdateBy = 1,
-                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreateBy = 1,
-                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            Price = 28000m,
-                            ProductId = 2,
-                            SizeName = "M",
-                            Status = 1,
-                            UpdateBy = 1,
-                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreateBy = 1,
-                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            Price = 32000m,
-                            ProductId = 2,
-                            SizeName = "L",
-                            Status = 1,
-                            UpdateBy = 1,
-                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreateBy = 1,
-                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            Price = 18000m,
-                            ProductId = 3,
-                            SizeName = "M",
-                            Status = 1,
-                            UpdateBy = 1,
-                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreateBy = 1,
-                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            Price = 22000m,
-                            ProductId = 3,
-                            SizeName = "L",
-                            Status = 1,
-                            UpdateBy = 1,
-                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreateBy = 1,
-                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            Price = 30000m,
-                            ProductId = 4,
-                            SizeName = "L",
-                            Status = 1,
-                            UpdateBy = 1,
-                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CreateBy = 1,
-                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            Price = 35000m,
-                            ProductId = 4,
-                            SizeName = "XL",
-                            Status = 1,
-                            UpdateBy = 1,
-                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CreateBy = 1,
-                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            Price = 28000m,
-                            ProductId = 5,
-                            SizeName = "M",
-                            Status = 1,
-                            UpdateBy = 1,
-                            UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 11,
-                            CreateBy = 1,
-                            CreateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified),
-                            Price = 25000m,
-                            ProductId = 6,
-                            SizeName = "M",
                             Status = 1,
                             UpdateBy = 1,
                             UpdateDate = new DateTime(2020, 12, 23, 1, 18, 30, 999, DateTimeKind.Unspecified)

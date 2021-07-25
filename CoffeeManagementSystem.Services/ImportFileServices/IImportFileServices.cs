@@ -21,9 +21,18 @@ namespace CoffeeManagementSystem.Services.ImportFileServices
         /// <param name="cloudName">Tên cloud.</param>
         /// <param name="apiKey">API key trên cloud.</param>
         /// <param name="apiSecret">API secret trên cloud.</param>
-        /// <returns></returns>
+        /// <returns>Thông tin khi upload image to cloud.</returns>
         Task<ResponseUploadImageCloud> AddPhotoCloudAsync(IFormFile formFile, string cloudName, string apiKey, string apiSecret);
         
+        /// <summary>
+        /// Add list photo cloud.
+        /// </summary>
+        /// <param name="listImage"></param>
+        /// <param name="cloudName"></param>
+        /// <param name="apiKey"></param>
+        /// <param name="apiSecret"></param>
+        /// <param name="productId"></param>
+        /// <returns></returns>
         List<ImageProductModel> AddListPhotoCloudAsync(List<IFormFile> listImage, string cloudName, string apiKey, string apiSecret, int productId);
 
         /// <summary>

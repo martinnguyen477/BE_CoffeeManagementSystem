@@ -4,8 +4,6 @@
 
 namespace CoffeeManagementSystem.API.Startup
 {
-    using CoffeeManagementSystem.Services.AttributeServices;
-    using CoffeeManagementSystem.Services.AttributeValueOrderDetailServices;
     using CoffeeManagementSystem.Services.AuthenticationServices;
     using CoffeeManagementSystem.Services.BranchServices;
     using CoffeeManagementSystem.Services.CartItemServices;
@@ -24,8 +22,6 @@ namespace CoffeeManagementSystem.API.Startup
     {
         public static void AddApplicationServicesExtensions(this IServiceCollection services)
         {
-            services.AddTransient<IAttributeServices, AttributeServices>();
-            services.AddTransient<IAttributeValueOrderDetailServices, AttributeValueOrderDetailServices>();
             services.AddTransient<IAuthenticationServices, AuthenticationServices>();
             services.AddTransient<IBranchServices, BranchServices>();
             services.AddTransient<ICartItemServices, CartItemServices>();

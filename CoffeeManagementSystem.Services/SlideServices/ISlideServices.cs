@@ -13,28 +13,28 @@ namespace CoffeeManagementSystem.Services.SlideServices
     public interface ISlideServices : IBaseServices
     {
         /// <summary>
-        /// DS SLIDE
+        /// Lấy danh sách slide.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Danh sách slides.</returns>
         List<SlideModel> GetListSlides();
 
         /// <summary>
-        /// Lấy danh sách slide.
+        /// Lấy danh sách slide theo số trang, theo kích cỡ trang.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Danh sách slides.</returns>
         List<SlideModel> GetListSlidesPaging(int pageSize, int pageNumber);
 
         /// <summary>
         /// Lấy danh sách slide hoạt động.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Danh sách slides còn đang hoạt động.</returns>
         List<SlideModel> GetListSlidesActive(int pageSize, int pageNumber);
 
         /// <summary>
-        /// Lấy thông tin chi tiết của slide;
+        /// Lấy thông tin chi tiết của slide từ slideId.
         /// </summary>
         /// <param name="slideId">mã slide.</param>
-        /// <returns></returns>
+        /// <returns>Thông tin chi tiết của slide.</returns>
         SlideReponse DetailSlideById(int slideId);
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace CoffeeManagementSystem.Services.SlideServices
         /// </summary>
         /// <param name="slideModel">model slide từ client.</param>
         /// <param name="imageSlide">hình ảnh slide.</param>
-        /// <returns></returns>
+        /// <returns>SlideModel. Thông tin slide vừa với insert.</returns>
         SlideModel CreateSlide(SlideModel slideModel, IFormFile imageSlide, string cloudName, string apiKey, string apiSerect);
 
         /// <summary>
@@ -50,14 +50,14 @@ namespace CoffeeManagementSystem.Services.SlideServices
         /// </summary>
         /// <param name="slideModel"></param>
         /// <param name="imageSlideUpdate"></param>
-        /// <returns></returns>
+        /// <returns>Thông tin slide vừa mới update.</returns>
         SlideModel UpdateSlide(SlideModel slideModel, IFormFile imageSlideUpdate, string cloudName, string apiKey, string apiSerect);
 
         /// <summary>
-        /// Xóa slide
+        /// Xóa slide.
         /// </summary>
         /// <param name="slideId"></param>
-        /// <returns></returns>
+        /// <returns>Trả về giá trị true or false.</returns>
         bool DeleteSlide(int slideId);
     }
 }

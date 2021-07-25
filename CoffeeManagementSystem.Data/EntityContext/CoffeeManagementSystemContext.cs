@@ -31,12 +31,6 @@ namespace CoffeeManagementSystem.Data.EntityContext
 
         #region Table Database
 
-        public virtual DbSet<AttributeEntities> Attribute { get; set; }
-
-        public virtual DbSet<AttributeValueOrderDetailEntities> AttributeValueBillDetail { get; set; }
-
-        public virtual DbSet<AttributeValueEntities> AttributeValue { get; set; }
-
         public virtual DbSet<BranchEntities> Branch { get; set; }
 
         public virtual DbSet<CartEntities> Cart { get; set; }
@@ -45,11 +39,23 @@ namespace CoffeeManagementSystem.Data.EntityContext
 
         public virtual DbSet<CategoryEntities> Category { get; set; }
 
+        public virtual DbSet<CredentialUserEntities> CredentialUser { get; set; }
+
+        public virtual DbSet<GroupUserEntities> GroupUser { get; set; }
+
+        public virtual DbSet<ImageProductEntities> ImageProduct { get; set; }
+
+        public virtual DbSet<OrderEntities> Order { get; set; }
+
         public virtual DbSet<OrderDetailEntities> OrderDetail { get; set; }
 
         public virtual DbSet<PositionEntities> Postiton { get; set; }
 
         public virtual DbSet<ProductEntities> Product { get; set; }
+
+        public virtual DbSet<RoleEntities> Role { get; set; }
+
+        public virtual DbSet<UserEntities> User { get; set; }
 
         public virtual DbSet<SlideEntities> Slide { get; set; }
 
@@ -59,9 +65,6 @@ namespace CoffeeManagementSystem.Data.EntityContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<AttributeEntities>().ToTable("Attribute").HasKey(x => x.Id);
-            modelBuilder.Entity<AttributeValueOrderDetailEntities>().ToTable("AttributeValueBillDetail").HasKey(x => new { x.BillDetailId, x.AttributeValueId });
-            modelBuilder.Entity<AttributeValueEntities>().ToTable("AttributeValue").HasKey(x => x.Id);
             modelBuilder.Entity<BranchEntities>().ToTable("Branch").HasKey(x => x.Id);
             modelBuilder.Entity<CartEntities>().ToTable("Cart").HasKey(x => x.Id);
             modelBuilder.Entity<CartItemEntities>().ToTable("CartItem").HasKey(x => new { x.CartId, x.ProductId });
@@ -74,6 +77,7 @@ namespace CoffeeManagementSystem.Data.EntityContext
             modelBuilder.Entity<PositionEntities>().ToTable("Position").HasKey(x => x.Id);
             modelBuilder.Entity<ProductEntities>().ToTable("Product").HasKey(x => x.Id);
             modelBuilder.Entity<RoleEntities>().ToTable("Role").HasKey(x => x.Id);
+            modelBuilder.Entity<SizeEntities>().ToTable("Size").HasKey(x => x.Id);
             modelBuilder.Entity<SlideEntities>().ToTable("Slide").HasKey(x => x.Id);
             modelBuilder.Entity<UserEntities>().ToTable("User").HasKey(x => x.Id);
             modelBuilder.SeedDataDefault();

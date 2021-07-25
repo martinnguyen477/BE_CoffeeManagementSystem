@@ -14,6 +14,7 @@ namespace CoffeeManagementSystem.API.Controllers
     using CoffeeManagementSystem.Model.Enum;
     using CoffeeManagementSystem.Model.Model;
     using CoffeeManagementSystem.Model.Request;
+    using CoffeeManagementSystem.Model.Response;
     using CoffeeManagementSystem.Services.ProductServices;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
@@ -93,6 +94,82 @@ namespace CoffeeManagementSystem.API.Controllers
             return result;
         }
 
+        #endregion
+
+        #region Get Product Detail
+        [HttpGet]
+        public RepositoryModel<GetProductRespone> GetProductDetailById(int productId)
+        {
+            //Lấy tên Controller, Action, Key
+            var controllerName = ControllerContext.ActionDescriptor.ControllerName;
+            var actionName = ControllerContext.ActionDescriptor.ActionName;
+            var key = DateTime.Now.ToString(CoffeeManagementSystemConfig.DateExpSqlFormat);
+
+            //Khở tạo model này là success. Và create data = null.
+            RepositoryModel<GetProductRespone> result = new RepositoryModel<GetProductRespone>()
+            {
+                PartnerCode = _internalCode.SuccessFull,
+                RetCode = ERetCodeSystem.Successfull,
+                Data = new GetProductRespone()
+            };
+
+            try
+            {
+                if (productId == 0)
+                {
+                    result.Data = null;
+                    result.PartnerCode = _internalCode.BadRequest;
+                    result.RetCode = ERetCodeSystem.BadRequest;
+                    result.Messenger = new MessengerError()
+                    {
+                        TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
+                        InternalMessage = _internalMessenger.BadRequest,
+                        HttpCode = ERepositoryStatus.BadRequest,
+                        SystemMessage = _internalMessenger.BadRequest
+                    };
+                    return result;
+                }
+
+                var productDetail = _productServices.GetProductById(productId);
+
+                if (productDetail != null)
+                {
+                    result.Data = productDetail;
+                    result.Messenger = new MessengerError()
+                    {
+                        TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
+                        InternalMessage = _internalMessenger.GetCartSuccess,
+                        HttpCode = ERepositoryStatus.Success,
+                        SystemMessage = _internalMessenger.GetPositionByIdSuccess
+                    };
+                }
+                else
+                {
+                    result.Data = null;
+                    result.PartnerCode = _internalCode.GetDataError;
+                    result.Messenger = new MessengerError()
+                    {
+                        TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
+                        InternalMessage = _internalMessenger.GetPositionByIdError,
+                        HttpCode = ERepositoryStatus.Error,
+                        SystemMessage = _internalMessenger.GetPositionByIdError
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                result.RetCode = ERetCodeSystem.SystemError;
+                result.PartnerCode = _internalCode.SystemError;
+                result.Messenger = new MessengerError()
+                {
+                    TraceId = Generator.GenerateCodeTracker(controllerName, actionName, key),
+                    InternalMessage = ex.Message,
+                    HttpCode = ERepositoryStatus.InternalError,
+                    SystemMessage = ex.ToString()
+                };
+            }
+            return result;
+        }
         #endregion
 
         #region Create Product
