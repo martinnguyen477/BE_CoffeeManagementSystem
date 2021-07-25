@@ -1,15 +1,14 @@
-﻿// <copyright file="ProductModel.cs" company="PlaceholderCompany">
+﻿// <copyright file="GetProductRespone.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace CoffeeManagementSystem.Model.Model
-{
-    using CoffeeManagementSystem.Model.BaseModel;
+using CoffeeManagementSystem.Model.BaseModel;
+using CoffeeManagementSystem.Model.Model;
+using System.Collections.Generic;
 
-    /// <summary>
-    /// Thực thể sản phẩm.
-    /// </summary>
-    public class ProductModel : BaseTableWithId
+namespace CoffeeManagementSystem.Model.Response
+{
+    public class GetProductRespone : BaseTableWithId
     {
         /// <summary>
         /// Gets or sets tên sản phẩm.
@@ -41,5 +40,10 @@ namespace CoffeeManagementSystem.Model.Model
         /// Gets or sets loại sản phẩm.
         /// </summary>
         public int CategoryId { get; set; }
+
+        /// <summary>
+        /// Gets or sets list Size For Product.
+        /// </summary>
+        public List<SizeModel> Sizes { get; set; }
     }
 }

@@ -17,6 +17,7 @@ namespace CoffeeManagementSystem.Data.ModelDataDefault
         {
             DateTime dateTime = new DateTime(2020, 12, 23, 1, 18, 30, 999);
 
+            #region Data Category
             modelBuilder.Entity<CategoryEntities>().HasData(
                 new CategoryEntities { Id = 1, CategoryName = "Đá xay ", PublicIdImage = "cvz5jcwk0zhlrzgre2kn", UrlImageCategory = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726517/cvz5jcwk0zhlrzgre2kn.png", Status = Model.Enum.StatusSystem.Active, CreateBy = 1, CreateDate = dateTime, UpdateBy = 1, UpdateDate = dateTime},
                 new CategoryEntities { Id = 2, CategoryName = "Chocolate", PublicIdImage = "cvz5jcwk0zhlrzgre2kn", UrlImageCategory = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726517/cvz5jcwk0zhlrzgre2kn.png", Status = Model.Enum.StatusSystem.Active, CreateBy = 1, CreateDate = dateTime, UpdateBy = 1, UpdateDate = dateTime },
@@ -26,25 +27,33 @@ namespace CoffeeManagementSystem.Data.ModelDataDefault
                 new CategoryEntities { Id = 6, CategoryName = "Cafe", PublicIdImage = "cvz5jcwk0zhlrzgre2kn", UrlImageCategory = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726517/cvz5jcwk0zhlrzgre2kn.png", Status = Model.Enum.StatusSystem.Active, CreateBy = 1, CreateDate = dateTime, UpdateBy = 1, UpdateDate = dateTime },
                 new CategoryEntities { Id = 8, CategoryName = "Sinh tố", PublicIdImage = "cvz5jcwk0zhlrzgre2kn", UrlImageCategory = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726517/cvz5jcwk0zhlrzgre2kn.png", Status = Model.Enum.StatusSystem.Active, CreateBy = 1, CreateDate = dateTime, UpdateBy = 1, UpdateDate = dateTime }
                 );
-           
+            #endregion
+
+            #region Data Role
             modelBuilder.Entity<RoleEntities>().HasData(
                 new RoleEntities { Id = 1, RoleName = "Add Category", Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
                 new RoleEntities { Id = 2, RoleName = "View Detail Category", Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
                 new RoleEntities { Id = 3, RoleName = "Update Category", Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
                 new RoleEntities { Id = 4, RoleName = "Update Status Category", Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
                 new RoleEntities { Id = 5, RoleName = "General List Category", Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime });
-           
+            #endregion
+
+            #region Data GroupUser
             modelBuilder.Entity<GroupUserEntities>().HasData(
                 new GroupUserEntities { Id = 1, GroupUserName = "Admin System", CreateBy = 1, CreateDate = dateTime, Status = Model.Enum.StatusSystem.Active, UpdateBy = 1, UpdateDate = dateTime },
                 new GroupUserEntities { Id = 2, GroupUserName = "Manager", CreateBy = 1, CreateDate = dateTime, Status = Model.Enum.StatusSystem.Active, UpdateBy = 1, UpdateDate = dateTime },
                 new GroupUserEntities { Id = 3, GroupUserName = "Staff", CreateBy = 1, CreateDate = dateTime, Status = Model.Enum.StatusSystem.Active, UpdateBy = 1, UpdateDate = dateTime },
                 new GroupUserEntities { Id = 4, GroupUserName = "Customer", CreateBy = 1, CreateDate = dateTime, Status = Model.Enum.StatusSystem.Active, UpdateBy = 1, UpdateDate = dateTime });
-           
+            #endregion
+
+            #region Data User
             modelBuilder.Entity<UserEntities>().HasData(
                 new UserEntities { Id = 1, FirstName = "Cường", LastName = "Nguyễn", Email = "nqcuong720@gmail.com", NumberPhone = "0377077630", Address = "351A Lạc Long Quân Phường 5 Quận 11 TP.Hồ Chí Minh" , BirthDay = dateTime, GroupUser = 1, Sex = "Nam", AvartarUrl = null, PublicId = null, UserName = "nqcuong20", Password = "d57587b0f5bbb0c3fe9d8cb16e97b0fe", Status = Model.Enum.StatusSystem.Active , CreateBy = 1, UpdateBy = 1, CreateDate = dateTime , UpdateDate = dateTime },
                 new UserEntities { Id = 2, FirstName = "Diệp", LastName = "Võ", Email = "volengocdiep2000@gmail.com", NumberPhone = "035458331", Address = "Phường Lê Hồng Phong TP.Quảng Ngãi" , BirthDay = dateTime, GroupUser = 2, Sex = "Nữ", AvartarUrl = null, PublicId = null, UserName = "vlndiep20", Password = "d57587b0f5bbb0c3fe9d8cb16e97b0fe", Status = Model.Enum.StatusSystem.Active , CreateBy = 1, UpdateBy = 1, CreateDate = dateTime , UpdateDate = dateTime }
                 );
-           
+            #endregion
+
+            #region Data Product
             modelBuilder.Entity<ProductEntities>().HasData(
                 new ProductEntities { Id = 1, ProductName = "ĐÀO VIỆT QUẤT ĐÁ XAY", Description = "Vẫn vị đào quen thuộc, nhưng được khoác lên mình một dáng vẻ đầy thanh mát và giải khát hơn.Kết hợp với mứt berry và lớp kem béo ngậy nhưng ngọt dịu,cho hương vị tươi mới và lôi cuốn,kích thích vị giác đầy thú vị ngay lần đầu thưởng thức.", ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png" , PublicId = "umggd5qbtmketrfid20r",  CategoryId = 1, Discount = 20, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
                 new ProductEntities { Id = 2, ProductName = "CHANH SẢ ĐÁ XAY", Description = "Sự kết hợp hài hoà giữa những nguyên liệu mộc mạc rất đỗi quen thuộc đối với người Việt cho một thức uống thanh mát, giải nhiệt lại tốt cho sức khoẻ.", ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png" , PublicId = "umggd5qbtmketrfid20r",  CategoryId = 1, Discount = 20, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
@@ -68,43 +77,34 @@ namespace CoffeeManagementSystem.Data.ModelDataDefault
                 new ProductEntities { Id = 20, ProductName = "CARAMEL MACCHIATO", Description = "Vị thơm béo của bọt sữa và sữa tươi, vị đắng thanh thoát của cà phê Espresso hảo hạng, và vị ngọt đậm của sốt caramel.", ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png" , PublicId = "umggd5qbtmketrfid20r",  CategoryId = 6, Discount = 20, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
                 new ProductEntities { Id = 21, ProductName = "ESPRESSO", Description = "Một cốc Espresso nguyên bản được bắt đầu bởi những hạt Arabica chất lượng, phối trộn với tỉ lệ cân đối hạt Robusta, cho ra vị ngọt caramel, vị chua dịu và sánh đặc. Để đạt được sự kết hợp này, chúng tôi xay tươi hạt cà phê cho mỗi lần pha.", ProductImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1624726478/umggd5qbtmketrfid20r.png" , PublicId = "umggd5qbtmketrfid20r",  CategoryId = 6, Discount = 20, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime }
                 );
-           
-            modelBuilder.Entity<AttributeEntities>().HasData(
-                new AttributeEntities { Id = 1, AttributeName = "Size", Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime }
-                );;
-            
-            modelBuilder.Entity<AttributeValueEntities>().HasData(
-                new AttributeValueEntities { Id = 1, AttributeId = 1, ProductId = 1 , Value = "S", Price = 28000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 2, AttributeId = 1, ProductId = 1 , Value = "M", Price = 35000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 3, AttributeId = 1, ProductId = 1 , Value = "XL", Price = 38000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 4, AttributeId = 1, ProductId = 2 , Value = "S", Price = 18000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 5, AttributeId = 1, ProductId = 2 , Value = "M", Price = 25000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 6, AttributeId = 1, ProductId = 2 , Value = "XL", Price = 30000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 7, AttributeId = 1, ProductId = 3 , Value = "S", Price = 23000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 8, AttributeId = 1, ProductId = 3 , Value = "M", Price = 28000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 9, AttributeId = 1, ProductId = 4 , Value = "M", Price = 30000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 10, AttributeId = 1, ProductId = 4 , Value = "XL", Price = 35000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 11, AttributeId = 1, ProductId = 5 , Value = "M", Price = 25000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 12, AttributeId = 1, ProductId = 6 , Value = "S", Price = 27000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 13, AttributeId = 1, ProductId = 6 , Value = "M", Price = 32000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 14, AttributeId = 1, ProductId = 7 , Value = "S", Price = 30000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 15, AttributeId = 1, ProductId = 7 , Value = "M", Price = 32000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 16, AttributeId = 1, ProductId = 7 , Value = "XL", Price = 35000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 17, AttributeId = 1, ProductId = 8 , Value = "M", Price = 36000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 18, AttributeId = 1, ProductId = 9 , Value = "L", Price = 33000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 19, AttributeId = 1, ProductId = 10 , Value = "XL", Price = 32000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 20, AttributeId = 1, ProductId = 11 , Value = "S", Price = 23000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 21, AttributeId = 1, ProductId = 12 , Value = "M", Price = 30000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
-                new AttributeValueEntities { Id = 22, AttributeId = 1, ProductId = 12 , Value = "XL", Price = 35000, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime }
+            #endregion
+
+            #region Data Size
+            modelBuilder.Entity<SizeEntities>().HasData(
+                new SizeEntities { Id = 1, SizeName = "M", Price = 25000, ProductId = 1, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
+                new SizeEntities { Id = 2, SizeName = "L", Price = 30000, ProductId = 1, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
+                new SizeEntities { Id = 3, SizeName = "XL", Price = 35000, ProductId = 1, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
+                new SizeEntities { Id = 4, SizeName = "M", Price = 28000, ProductId = 2, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
+                new SizeEntities { Id = 5, SizeName = "L", Price = 32000, ProductId = 2, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
+                new SizeEntities { Id = 6, SizeName = "M", Price = 18000, ProductId = 3, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
+                new SizeEntities { Id = 7, SizeName = "L", Price = 22000, ProductId = 3, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
+                new SizeEntities { Id = 8, SizeName = "L", Price = 30000, ProductId = 4, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
+                new SizeEntities { Id = 9, SizeName = "XL", Price = 35000, ProductId = 4, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
+                new SizeEntities { Id = 10, SizeName = "M", Price = 28000, ProductId = 5, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
+                new SizeEntities { Id = 11, SizeName = "M", Price = 25000, ProductId = 6, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime }
                 );
-            
+            #endregion
+
+            #region Position
             modelBuilder.Entity<PositionEntities>().HasData(
                 new PositionEntities { Id = 1, PositionName = "Nhân Viên Phục Vụ", Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
                 new PositionEntities { Id = 2, PositionName = "Thu Nhân", Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
                 new PositionEntities { Id = 3, PositionName = "Nhân Viên Quản Lý", Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
                 new PositionEntities { Id = 4, PositionName = "Bảo Vệ", Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime }
                 );
-            
+            #endregion
+
+            #region Data Branch
             modelBuilder.Entity<BranchEntities>().HasData(
                 new BranchEntities { Id = 1, BranchName = "572 Ba Tháng Hai", Email = "nqcuong720@gmail.com", NumberPhone = "0377077630", Address = "572 Ba Tháng Hai, Quận 10, Hồ Chí Minh, Việt Nam", ManagerEmployeeId = 1, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
                 new BranchEntities { Id = 2, BranchName = "798 Sư Vạn Hạnh", Email = "nqcuong720@gmail.com", NumberPhone = "0377077630", Address = "798 Sư Vạn Hạnh, Quận 10, Hồ Chí Minh, Việt Nam", ManagerEmployeeId = 2, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
@@ -112,6 +112,9 @@ namespace CoffeeManagementSystem.Data.ModelDataDefault
                 new BranchEntities { Id = 4, BranchName = "25A Đồng Nai", Email = "nqcuong720@gmail.com", NumberPhone = "0377077630", Address = "25A Đồng Nai, Quận 10, Hồ Chí Minh, Việt Nam", ManagerEmployeeId = 4, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
                 new BranchEntities { Id = 5, BranchName = "159 Phạm Ngũ Lão", Email = "nqcuong720@gmail.com", NumberPhone = "0377077630", Address = "159 Phạm Ngũ Lão, Quận 1, Hồ Chí Minh, Việt Nam", ManagerEmployeeId = 5, Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime }
                 );
+            #endregion
+
+            #region Data Slide
             modelBuilder.Entity<SlideEntities>().HasData(
                 new SlideEntities { Id = 1, SlideName = "Đại Lễ 30-4", PublicId = "ikb4lno0tsinvuhgfg0e", UrlSlideImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1625247148/ikb4lno0tsinvuhgfg0e.jpg", Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
                 new SlideEntities { Id = 2, SlideName = "Mừng Tết Thiếu Nhi", PublicId = "ikb4lno0tsinvuhgfg0e", UrlSlideImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1625247148/ikb4lno0tsinvuhgfg0e.jpg", Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
@@ -121,6 +124,7 @@ namespace CoffeeManagementSystem.Data.ModelDataDefault
                 new SlideEntities { Id = 6, SlideName = "Khuyến Mãi Đầu Tuần", PublicId = "ikb4lno0tsinvuhgfg0e", UrlSlideImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1625247148/ikb4lno0tsinvuhgfg0e.jpg", Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime },
                 new SlideEntities { Id = 7, SlideName = "Ưu đãi Tháng 6", PublicId = "ikb4lno0tsinvuhgfg0e", UrlSlideImage = "https://res.cloudinary.com/nqcuong720/image/upload/v1625247148/ikb4lno0tsinvuhgfg0e.jpg", Status = Model.Enum.StatusSystem.Active, CreateBy = 1, UpdateBy = 1, CreateDate = dateTime, UpdateDate = dateTime }
                 );
+            #endregion
         }
     }
 }

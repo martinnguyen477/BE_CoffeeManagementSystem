@@ -5,11 +5,13 @@
 namespace CoffeeManagementSystem.Services.ProductServices
 {
     using System;
+    using System.Linq;
     using System.Collections.Generic;
     using AutoMapper;
     using CoffeeManagementSystem.Data.EntityContext;
     using CoffeeManagementSystem.Model.EntitiesModel;
     using CoffeeManagementSystem.Model.Model;
+    using CoffeeManagementSystem.Model.Response;
     using CoffeeManagementSystem.Services.ImportFileServices;
     using Microsoft.AspNetCore.Http;
 
@@ -47,6 +49,11 @@ namespace CoffeeManagementSystem.Services.ProductServices
 
             return _mapper.Map<ProductModel>(resultObject);
         }
+
+        public ProductModel CreateProduct(ProductModel productModel, IFormFile avatarImage, List<IFormFile> ImagesDetail, List<SizeModel> sizes, string cloudName, string apiKey, string apiSerect)
+        {
+            throw new NotImplementedException();
+        }
         #endregion
 
         #region Delete
@@ -73,7 +80,19 @@ namespace CoffeeManagementSystem.Services.ProductServices
         }
         #endregion
 
-        public List<ProductModel> GetListProductsByCategory(int categoryId, int pageIndex, int pageSize)
+        public List<GetProductRespone> GetListProductsByCategory(int categoryId, int pageIndex, int pageSize)
+        {
+
+            List<GetProductRespone> getProductRespone = new List<GetProductRespone>();
+            return getProductRespone;
+        }
+
+        public List<GetProductRespone> GetListProductsByCategoryAll(int categoryId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<GetProductRespone> GetListProductsNew()
         {
             throw new NotImplementedException();
         }
@@ -83,15 +102,30 @@ namespace CoffeeManagementSystem.Services.ProductServices
             throw new NotImplementedException();
         }
 
-        #region Get Product By Id
-        public ProductModel GetProductById(int productId)
+        public GetProductRespone GetProductAll()
         {
-            return _mapper.Map<ProductModel>(GetObject<ProductEntities>(pro => pro.Id == productId));
+            throw new NotImplementedException();
+        }
+
+        #region Get Product By Id
+        public GetProductRespone GetProductById(int productId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public GetProductRespone GetProductPaging(int pageIndex, int pageSize)
+        {
+            throw new NotImplementedException();
         }
         #endregion
 
         #region UpdateProduct
         public ProductModel UpdateProduct(ProductModel productModel, IFormFile avatarImage, List<IFormFile> ImagesDetail, string cloudName, string apiKey, string apiSerect)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ProductModel UpdateProduct(ProductModel productModel, IFormFile avatarImage, List<IFormFile> ImagesDetail, List<SizeModel> sizes, string cloudName, string apiKey, string apiSerect)
         {
             throw new NotImplementedException();
         }

@@ -65,5 +65,10 @@ namespace CoffeeManagementSystem.Services.UserServices
         {
             throw new System.NotImplementedException();
         }
+
+        public bool UpdateStatusUser(int userId)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

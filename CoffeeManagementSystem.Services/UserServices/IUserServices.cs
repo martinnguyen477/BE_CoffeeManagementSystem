@@ -21,5 +21,7 @@ namespace CoffeeManagementSystem.Services.UserServices
         bool CheckPassworkForUser(int userId, string oldPassword);
 
         bool ChangePassword(int userId, string newPassword);
+
+        bool UpdateStatusUser(int userId);
     }
 }

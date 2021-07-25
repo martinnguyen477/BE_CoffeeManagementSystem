@@ -27,10 +27,9 @@ namespace CoffeeManagementSystem.Services.SlideServices
             _importFileServices = importFileServices;
             Context = new CoffeeManagementSystemContext();
         }
-
         #endregion
 
-        #region GetListSlides
+        #region Get List Slides Paging
         public List<SlideModel> GetListSlidesPaging(int pageSize, int pageNumber)
         {
             List<SlideModel> slideModels =  _mapper.Map<List<SlideModel>>(GetList<SlideEntities>());
@@ -42,7 +41,7 @@ namespace CoffeeManagementSystem.Services.SlideServices
         }
         #endregion
 
-        #region GetListSlidesActive
+        #region Get List Slides Active
         public List<SlideModel> GetListSlidesActive(int pageSize, int pageNumber)
         {
             List<SlideModel> slideModels= _mapper.Map<List<SlideModel>>(GetList<SlideEntities>(sl => sl.Status == Model.Enum.StatusSystem.Active));
@@ -54,7 +53,7 @@ namespace CoffeeManagementSystem.Services.SlideServices
         }
         #endregion
 
-        #region DetailSlideById
+        #region Detail Slide By Id
         public SlideReponse DetailSlideById(int slideId)
         {
             var resultDetail = (from sl in Context.Set<SlideEntities>()
@@ -111,7 +110,7 @@ namespace CoffeeManagementSystem.Services.SlideServices
         }
         #endregion
 
-        #region DeleteSlide
+        #region Delete Slide
         public bool DeleteSlide(int slideId)
         {
             SlideEntities slide = GetObject<SlideEntities>(sl => sl.Id == slideId);
@@ -123,8 +122,7 @@ namespace CoffeeManagementSystem.Services.SlideServices
         }
         #endregion
 
-        #region GetListSlides
-
+        #region Get List Slides
         public List<SlideModel> GetListSlides()
         {
            return _mapper.Map<List<SlideModel>>(GetList<SlideEntities>());
